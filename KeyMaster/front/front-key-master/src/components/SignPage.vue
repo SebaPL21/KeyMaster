@@ -36,19 +36,7 @@
 </template>
 <style lang="scss">
 
-.v-main{
-  background-color: #092525;
-}
-#app {
-  font-size: 1rem;
-  color: #222;
-  background-color: #092525;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 </style>
 <script lang="ts">

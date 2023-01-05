@@ -1,0 +1,2 @@
+C:\Users\sebas\Documents\KeyMaster\KeyMaster\front\front-key-master\obj\Debug\front-key-master.esproj.SuggestedBindingRedirects.cache
+C:\Users\sebas\Documents\KeyMaster\KeyMaster\front\front-key-master\obj\Debug\front-key-master.esproj.CoreCompileInputs.cache

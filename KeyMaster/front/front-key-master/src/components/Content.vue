@@ -1,8 +1,7 @@
-<template>
-  <container>
-    <navbar></navbar>
-    <div >
-     <!-- <table>
+<template>  
+<v-container>
+    <!-- <div >
+     <table>
             <thead>
                 <tr>
                     <th>Date</th>
@@ -19,18 +18,19 @@
                     <td>{{ forecast.summary }}</td>
                 </tr>
             </tbody>
-        </table> -->
-    </div>    
+        </table>
+    </div>     -->
   <div class="container">
     Lesson container
+     
   </div>
-    
-  </container>
+</v-container>
+ 
 </template>
 
 <script lang='ts'>
 import { defineComponent } from 'vue'
-
+import Profile from "../views/Profil.vue"
 import '@/styles/style.scss'
 
 type Forecasts = {
@@ -43,7 +43,9 @@ type Forecasts = {
     }
 export default defineComponent({
     name: "MainContent",
-        
+    components:{
+        Profile,
+    },
     data(): Data {
             return {
                 loading: false,
