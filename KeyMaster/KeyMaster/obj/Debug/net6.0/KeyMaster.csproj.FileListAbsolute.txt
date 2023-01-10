@@ -34,3 +34,4 @@ C:\Users\sebas\Documents\KeyMaster\KeyMaster\KeyMaster\bin\Debug\net6.0\Lessons\
 C:\Users\sebas\Documents\KeyMaster\KeyMaster\KeyMaster\bin\Debug\net6.0\users.json
 C:\Users\sebas\Documents\KeyMaster\KeyMaster\KeyMaster\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\sebas\Documents\KeyMaster\KeyMaster\KeyMaster\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\sebas\Documents\KeyMaster\KeyMaster\KeyMaster\bin\Debug\net6.0\Lessons\lessons.json

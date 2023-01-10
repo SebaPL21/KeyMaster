@@ -1,0 +1,45 @@
+$red : #c03e3f;
+$dark : #252525;
+$navBg: #181818;
+.lesson-container{
+    top: 100px;
+    position: relative;
+    width: 1050px;
+    height: 480px;
+    border-radius: 10px;
+    background-color: $dark;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .2),
+      0 10px 10px rgba(0, 0, 0, .2);
+        
+    .quote{
+        background-color: $dark;
+        color: $red;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 20px 0 0 20px;
+    }
+    .autor{
+        color: $red;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: right;
+        padding-right: 20px;
+        width: 100%;
+    }
+    .inputlesson{
+        width: 100%;
+        display: flex;
+    }
+    .wordInput{
+        margin-left: 20px;
+        width: 90%;
+        color: $red;
+        background: $dark;
+        border: $red 1px solid;
+        border-radius: 30px;
+        padding-left: 10px;
+        height: 40px;
+        
+    }
+}

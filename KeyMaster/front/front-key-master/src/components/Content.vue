@@ -1,37 +1,27 @@
 <template>  
-<v-container>
-    <!-- <div >
-     <table>
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Temp. (C)</th>
-                    <th>Temp. (F)</th>
-                    <th>Summary</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="forecast in post" :key="forecast.date">
-                    <td>{{ forecast.date }}</td>
-                    <td>{{ forecast.temperatureC }}</td>
-                    <td>{{ forecast.temperatureF }}</td>
-                    <td>{{ forecast.summary }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>     -->
-  <div class="container">
-    Lesson container
+  <div class="lesson-container">
+    <div class="quote">
+        {{ text }}
+        <div class="autor">
+        {{ source }}
+     </div>
+     </div>
      
-  </div>
-</v-container>
- 
+     <div class="inputlesson">
+        <input type="text" class="wordInput" 
+        v-model="inputText"
+        :maxlength="length"
+        :on-keypress="checkForMistakes()"/> 
+     </div>
+    </div>
 </template>
 
 <script lang='ts'>
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import Profile from "../views/Profil.vue"
 import '@/styles/style.scss'
+import '@/styles/content.scss'
+import { is } from '@babel/types';
 
 type Forecasts = {
         date: string
@@ -46,34 +36,68 @@ export default defineComponent({
     components:{
         Profile,
     },
-    data(): Data {
+    
+    data(){
             return {
                 loading: false,
-                post: null
+                post: null,
+                result: String,
+                text: "",
+                source: '',
+                length: '',
+                inputText:'',
+                errors: 0
             };
+        },
+        computed:{
+            
         },
         created() {
             // fetch the data when the view is created and the data is
             // already being observed
-            this.fetchData();
+           // this.fetchData();
+            this.fetchLesson();
         },
         watch: {
             // call again the method if the route changes
-            '$route': 'fetchData'
+            //'$route': 'fetchData'
         },
         methods: {
-            fetchData(): void {
-                this.post = null;
-                this.loading = true;
+            fetchLesson(){
+               this.axios.get('api/lesson/fetch')
+                .then(resposne => {
+                    this.result = resposne.data
+                   console.log(this.result)
+                   this.source =resposne.data.source;
+                   this.text = resposne.data.text;
+                   this.length = resposne.data.length;
+                    return this.result ;
+                })
+            },
+            checkForMistakes(){
+                var text = this.text;
+                var inputText = this.inputText;
+                let errorsTMP = 0
+                var textArray = text.split('');
+                var inputTextArray = inputText.split('')
+                console.log(inputTextArray)
 
-                fetch('weatherforecast')
-                    .then(r => r.json())
-                    .then(json => {
-                        this.post = json as Forecasts;
-                        this.loading = false;
-                        return;
-                    });
-            }
+                for (let i = 0; i < inputTextArray.length; i++) {
+                    if (inputTextArray[i] !== textArray[i]) {
+                        errorsTMP++
+                        this.errors =+ errorsTMP
+                        console.log("this.errors: "+this.errors)
+                        console.log("errors: "+errorsTMP)
+                        console.log("błąd")
+                    }
+                    else{
+                        console.log("git ")  
+                    }
+                }
+                //console.log(textArray)
+                //console.log(inputText);
+            },
+                   
         },
     });
 </script>

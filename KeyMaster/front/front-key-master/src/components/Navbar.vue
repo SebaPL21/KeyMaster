@@ -3,7 +3,7 @@
         <div class="nav">
            <router-link to="/"> <h1 class="logo">KeyMaster</h1></router-link> 
             <div class="nav-links">
-                <router-link to="/lesson"><h2>Lekcje</h2></router-link> 
+                <router-link to="#"><h2>Lekcje</h2></router-link> 
                 <router-link to="/test"><h2>Test</h2></router-link> 
                 <h2>Memy</h2> 
             </div>

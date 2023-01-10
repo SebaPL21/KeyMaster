@@ -91,7 +91,7 @@ h2:hover{
     transition: 1s;
     text-decoration: underline #c03e3f;
     transition: 0.5s;
-    /* border-bottom: 2px solid #c03e3f; */
+    
 }
 /* początek głównego ekranu   */
 .main-container{
@@ -100,18 +100,7 @@ h2:hover{
     height: 85vh;
     width: 100%;
 }
-.container{
-    top: 100px;
-    position: relative;
-    width: 1050px;
-    height: 480px;
-    border-radius: 10px;
-    background-color: $dark;
-    overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, .2),
-      0 10px 10px rgba(0, 0, 0, .2);
-    background: linear-gradient(to bottom, #efefef, #ccc);
-}
+
 
 .Sign-container {
     top: 180px;
