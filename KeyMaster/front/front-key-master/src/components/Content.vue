@@ -12,6 +12,7 @@
         v-model="inputText"
         :maxlength="length"
         :on-keypress="checkForMistakes()"/> 
+        {{ errors }}
      </div>
     </div>
 </template>
@@ -84,11 +85,10 @@ export default defineComponent({
 
                 for (let i = 0; i < inputTextArray.length; i++) {
                     if (inputTextArray[i] !== textArray[i]) {
-                        errorsTMP++
-                        this.errors =+ errorsTMP
-                        console.log("this.errors: "+this.errors)
-                        console.log("errors: "+errorsTMP)
-                        console.log("błąd")
+                        errorsTMP++ 
+                        console.log("błąd") 
+                        console.log("errors: "+errorsTMP) 
+                        this.errors=errorsTMP
                     }
                     else{
                         console.log("git ")  
