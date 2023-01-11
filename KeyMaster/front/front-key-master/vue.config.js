@@ -27,7 +27,7 @@ module.exports = {
             '^/weatherforecast': {
                 target: 'https://localhost:5001'
             },
-            '^/api/lesson':{
+            '^/api/quotes':{
                 target: 'https://localhost:5001',
 
             }

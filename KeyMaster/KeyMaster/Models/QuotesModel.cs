@@ -1,6 +1,6 @@
-﻿namespace KeyMaster
+﻿namespace KeyMaster.Models
 {
-    public class LessonModel
+    public class QuotesModel
     {
         public int Id { get; set; }
         public string Source { get; set; }

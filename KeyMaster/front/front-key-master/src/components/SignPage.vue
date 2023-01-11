@@ -30,6 +30,7 @@
         <input type="password" placeholder="Hasło" />
         <a href="#">Zapomniałeś hasła?</a>
         <button class="button">Zaloguj</button>
+        <button class="button" @click="login()"> Zaloguj się </button> 
       </form>
     </div>
  </article>
@@ -40,15 +41,31 @@
 
 </style>
 <script lang="ts">
-    import '@/styles/style.scss'
-
+    import '@/styles/style.scss' 
+    import { useAuth0 } from '@auth0/auth0-vue';
     export default {
         name: "SignupPage",
+        components:{},
+        setup(){
+            const { loginWithRedirect, user, logout } = useAuth0();
+            return{
+                login: () =>{
+                    loginWithRedirect ();
+                    console.log("zalogowano" + user.value.name )
+                },
+                logout: () =>{
+                    logout({returnTo: window.location.origin})
+                },
+                user
+            }
+        },
+        methods:{
+         },
         data: () => {
-    return {
-      signUp: false
-    }
-  }
+        return {
+        signUp: false
+        }
+      }
    
     }
 </script>
