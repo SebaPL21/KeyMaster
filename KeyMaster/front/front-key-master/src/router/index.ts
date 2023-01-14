@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import { createAuth0, authGuard } from '@auth0/auth0-vue';
+import { createAuth0, authGuard } from "@auth0/auth0-vue";
 import MainPage from "../views/MainPage.vue";
 import SignupPage from "../components/SignPage.vue";
 import TestPage from "../views/Test.vue";
-import Profile from "../views/Profil.vue"
+import Profile from "../views/Profil.vue";
+import Lesson from "@/views/Lesson.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
@@ -13,21 +14,24 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/signup",
     name: "SignupPage",
-    component: SignupPage
+    component: SignupPage,
   },
   {
     path: "/test",
     name: "Test",
     component: TestPage,
-  },  
+  },
   {
     path: "/profile",
     name: "Profile",
     component: Profile,
-    beforeEnter: authGuard
+  },
+  {
+    path: "/Lesson",
+    name: "Leeson",
+    component: Lesson,
   },
 ];
-
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

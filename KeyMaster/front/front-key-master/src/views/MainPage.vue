@@ -1,7 +1,13 @@
 <template>
-   <Navbar></Navbar>     
-   <Content></Content>
-   <Footer></Footer>
+  <Navbar></Navbar>
+  <div class="test-title">
+    <h1>Witaj na stronie testowej.</h1>
+    <p>
+      Tutaj będziesz mógł/mogła sprawdzić swoje postępy w praktycznym teście.
+    </p>
+  </div>
+  <Content></Content>
+  <Footer></Footer>
 </template>
 
 <script lang="ts">
@@ -16,6 +22,6 @@ import Footer from "@/components/Footer.vue";
     Content,
     Footer,
   },
-  })
+})
 export default class MainPage extends Vue {}
 </script>
