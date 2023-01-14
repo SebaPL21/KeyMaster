@@ -22,7 +22,7 @@ import { defineComponent, ref } from 'vue'
 import Profile from "../views/Profil.vue"
 import '@/styles/style.scss'
 import '@/styles/content.scss'
-import { is } from '@babel/types';
+
 
 type Forecasts = {
         date: string
@@ -65,7 +65,7 @@ export default defineComponent({
         },
         methods: {
             fetchLesson(){
-               this.axios.get('api/lesson/fetch')
+               this.axios.get('api/quotes/fetch')
                 .then(resposne => {
                     this.result = resposne.data
                    console.log(this.result)

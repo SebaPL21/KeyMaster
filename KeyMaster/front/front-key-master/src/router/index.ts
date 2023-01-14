@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { createAuth0, authGuard } from '@auth0/auth0-vue';
 import MainPage from "../views/MainPage.vue";
 import SignupPage from "../components/SignPage.vue";
 import TestPage from "../views/Test.vue";
@@ -23,6 +24,7 @@ const routes: Array<RouteRecordRaw> = [
     path: "/profile",
     name: "Profile",
     component: Profile,
+    beforeEnter: authGuard
   },
 ];
 
