@@ -57,13 +57,14 @@ export default defineComponent({
     return {
       email: "",
       password: "",
+      signUp: false,
     };
   },
   components: {},
   methods: {
     submitForm() {
       axios
-        .post("api/login/post", {
+        .post("https://localhost:5001/api/JWTToken/login", {
           email: this.email,
           password: this.password,
         })

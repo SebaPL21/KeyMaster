@@ -17,6 +17,7 @@ namespace KeyMaster.Controllers
             {
                 var jsonString = r.ReadToEnd();
                 var results = JsonConvert.DeserializeObject<List<LessonModel>>(jsonString);
+
                 if (results == null)
                     return StatusCode(StatusCodes.Status404NotFound);
                 return results.First(x => x.Id == id);

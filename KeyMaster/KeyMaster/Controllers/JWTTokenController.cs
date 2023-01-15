@@ -42,8 +42,7 @@ namespace KeyMaster.Controllers
                         new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
                         new Claim("userId", user.UserId.ToString()),
                         new Claim("email", user.Email),
-                        new Claim("password", user.Password),
-                        new Claim("nickname", user.Nickname)
+                        new Claim("password", user.Password)
                     };
                     var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt.key));
                     var singIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

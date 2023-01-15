@@ -6,9 +6,7 @@ namespace KeyMaster.Models
     public class UserModel
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
-        public string Nickname { get; set; }
 
         [Required(ErrorMessage = "Password is requried!")]
         public string Password { get; set; }

@@ -5,29 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f3065f8-9d36-4710-bf63-64a39a280a42" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/04c8a7e7-9340-4ec3-a08e-1873b48d2a88.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/0f7dc119-7ccf-47ef-91c1-b40046d3e555.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/20385087-2ff6-4474-bb2c-fa0d6c8277fd.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/24e99c25-3a05-4340-afaf-0ad1f8c45d9e.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/615723c2-1d48-4d9e-b7f9-d611ad1efdf7.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/617f9a26-18f6-4ca1-aee3-35e5ccac7557.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/873d614c-81cf-45ee-8d9a-a0cd3733b641.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/903f1235-e886-49cb-a0f4-be482a88bf54.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/958dee2e-7bdc-4c05-94cf-d5265609aa8c.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/9e2b541b-0d4d-4ae6-8732-49b8d4643646.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/a2ed90d2-cd79-4072-90aa-1ac728434f53.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/b82c9218-b2dc-4204-8809-85e9890d6d6e.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/cb86c496-160a-44a2-93bc-c73bf2e32814.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/dc15bca7-2039-4c8e-9d22-3a724a0f81bd.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/dc8100bd-cbe9-4f58-a710-350d8d4fdbda.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/FileContentIndex/f22b3e3b-42ca-4c75-95cf-8f6ab9ad4f45.vsidx" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-key-master/src/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.futdcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/v17/fileList.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/v17/fileList.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.metadata.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.metadata.v5.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.projects.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.projects.v5.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/Controllers/LessonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/Controllers/LessonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/Controllers/WeatherForecastController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/Controllers/WeatherForecastController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/KeyMaster.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/KeyMaster.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KeyMaster/Lessons/lessons.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/Lessons/lessons.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/KeyMaster.csproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/KeyMaster.csproj.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/Lessons/lessons.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/Lessons/lessons.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/Microsoft.IdentityModel.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/Microsoft.IdentityModel.Abstractions.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
@@ -39,6 +33,7 @@
       <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/System.Security.Permissions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/System.Security.Permissions.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/System.Windows.Extensions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/System.Windows.Extensions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll" afterDir="false" />
@@ -49,25 +44,16 @@
       <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/ref/KeyMaster.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/ref/KeyMaster.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/refint/KeyMaster.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/refint/KeyMaster.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/KeyMaster.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/KeyMaster.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/KeyMaster.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/KeyMaster.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/KeyMaster.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/KeyMaster.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/components/Content.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/components/Content.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/components/Navbar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/components/SignPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/components/SignPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/styles/content.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/styles/content.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/styles/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/views/Lesson.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/Lesson.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/views/MainPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/MainPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/views/Test.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/Test.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-key-master/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +103,8 @@
       <workItem from="1673689346073" duration="11625000" />
       <workItem from="1673722561853" duration="2068000" />
       <workItem from="1673730643749" duration="1034000" />
-      <workItem from="1673731901044" duration="1021000" />
+      <workItem from="1673731901044" duration="1402000" />
+      <workItem from="1673799613017" duration="6725000" />
     </task>
     <servers />
   </component>
