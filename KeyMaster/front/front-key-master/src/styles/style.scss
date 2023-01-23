@@ -1,13 +1,14 @@
-$red : #c03e3f;
-$dark : #252525;
+$red: #c03e3f;
+$dark: #252525;
 $navBg: #181818;
 
-#app{
-    background-color: $dark;;
-    color: $red;
-    margin: 0;
+#app {
+  background-color: $dark;;
+  color: $red;
+  margin: 0;
 }
-#app{
+
+#app {
   font-size: 1rem;
   color: #222;
   width: 100%;
@@ -16,299 +17,327 @@ $navBg: #181818;
   justify-content: center;
   align-items: center;
 }
-.v-main{
+
+.v-main {
   background-color: $dark;
 }
-.nav{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    margin: 0px 25px 0px 25px;
-    align-items: center; 
+
+.nav {
+  display: flex;
+  width: 1080px;
+  justify-content: space-around;
+  margin: auto;
+  align-items: center;
 }
+
 .navbar {
-    background-color: $navBg;
-    color:#fff;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    
+  background-color: $navBg;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
 }
-.v-toolbar__content{
-    color: #fff;
-    background-color: $navBg;
-    height: 85px !important;
-    
+
+.lessonList {
+  background-color: $dark !important;
+
+  a {
+    color: $red;
+    font-weight: bold;
+  }
 }
-.nav-links{
+
+.v-toolbar__content {
+  color: #fff;
+  background-color: $navBg;
+  height: 85px !important;
+
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+
+  h2 {
     display: flex;
-    justify-content: space-around;
-    h2{
-      display: flex;
-      margin: 0px 10px 0px 10px;
-      align-items: center;
-      color: #ddd;
-   }
+    margin: 0px 10px 0px 10px;
+    align-items: center;
+    color: #ddd;
+    cursor: pointer;
+  }
 }
 
 .nav-signs-buttons {
-    display: flex;
-    align-items: center;
-    border-radius: 50px;
-    justify-content: space-around;
-    padding: 10px;
-    font-weight: 600;
-    height: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  justify-content: space-around;
+  padding: 10px;
+  font-weight: 600;
+  height: 20px;
 
-     button{
-        border: none;
-        background-color: transparent;
-        color: #fff;
-        background-color: $red;
-        border-radius: 50px;
-        font-weight: 600;
-        height: 40px;
-        width: 100px;
-    }
-}
-
-.nav-signs-buttons button:hover{
-    transition: 0.5s;
-    border-radius: 50px;
-    background-color: #ffffff;
-    color: $dark;
-}
-.logo{
-   margin: 10px 0px 10px 0px;
-   color: #ddd;
-}
-.logo:hover{
-    transition: 0.3s;
-    color: #c03e3f;
-    text-shadow: #5a1f1f -5px 5px 15px;
-}
-h2:hover{
-    transition: 1s;
-    text-decoration: underline #c03e3f;
-    transition: 0.5s;
-    
-}
-/* początek głównego ekranu   */
-.main-container{
-    background-color: $dark;
+  button {
+    border: none;
+    background-color: transparent;
     color: #fff;
-    height: 85vh;
-    width: 100%;
+    background-color: $red;
+    border-radius: 50px;
+    font-weight: 600;
+    height: 40px;
+    width: 100px;
+  }
+}
+
+.nav-signs-buttons button:hover {
+  transition: 0.5s;
+  border-radius: 50px;
+  background-color: #ffffff;
+  color: $dark;
+}
+
+v-theme--dark {
+  background: $dark;
+  color: $red;
+}
+
+.logo {
+  margin: 10px 0px 10px 0px;
+  color: #ddd;
+}
+
+.logo:hover {
+  transition: 0.3s;
+  color: #c03e3f;
+  text-shadow: #5a1f1f -5px 5px 15px;
+}
+
+h2:hover {
+  transition: 1s;
+  text-decoration: underline #c03e3f;
+  transition: 0.5s;
+
+}
+
+/* początek głównego ekranu   */
+.main-container {
+  background-color: $dark;
+  color: #fff;
+  height: 85vh;
+  width: 100%;
 }
 
 
 .Sign-container {
-    top: 180px;
-    position: relative;
-    width: 768px;
-    height: 480px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, .2),
-      0 10px 10px rgba(0, 0, 0, .2);
-    background: linear-gradient(to bottom, #efefef, #ccc);
-  
-    .overlay-container {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 50%;
-      height: 100%;
-      overflow: hidden;
-      transition: transform .5s ease-in-out;
-      z-index: 100;
-    }
-  
-    .overlay {
-      position: relative;
-      left: -100%;
-      height: 100%;
-      width: 200%;
-      background: linear-gradient(to bottom right, #b91212,  #141414);
-      color: #fff;
-      transform: translateX(0);
-      transition: transform .5s ease-in-out;
-    }
-  
-    @mixin overlays($property) {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      flex-direction: column;
-      padding: 163px 73px;
-      text-align: center;
-      transform: translateX($property);
-      transition: transform .5s ease-in-out;
-    }
-  
-    .overlay-left {
-      @include overlays(-20%);
-    }
-  
-    .overlay-right {
-      @include overlays(0);
-      right: 0;
-    }
-  }
-  
-  h2 {
-    margin: 0;
-  }
-  
-  p {
-    margin: 20px 0 30px;
-  }
-  
-  a {
-    color: #222;
-    text-decoration: none;
-    margin: 15px 0;
-    font-size: 1rem;
-  }
-  
-  .button {
-    border-radius: 20px;
-    border: 1px solid $red;
-    background-color: $red;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 10px 40px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: transform .1s ease-in;
-    margin-top: 10px;
-  
-        &:active {
-          transform: scale(.9);
-        }
-    
-        &:focus {
-          outline: none;
-        }
-  }
-  
-  .button.invert {
-    background-color: transparent;
-    border-color: #fff;
-  }
-  
-  form {
+  top: 180px;
+  position: relative;
+  width: 768px;
+  height: 480px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .2),
+  0 10px 10px rgba(0, 0, 0, .2);
+  background: linear-gradient(to bottom, #efefef, #ccc);
+
+  .overlay-container {
     position: absolute;
     top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform .5s ease-in-out;
+    z-index: 100;
+  }
+
+  .overlay {
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    background: linear-gradient(to bottom right, #b91212, #141414);
+    color: #fff;
+    transform: translateX(0);
+    transition: transform .5s ease-in-out;
+  }
+
+  @mixin overlays($property) {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    padding: 90px 60px;
-    width: 50%;
+    padding: 163px 73px;
     text-align: center;
-    background: linear-gradient(to bottom, #efefef, #ccc);
-    transition: all .5s ease-in-out;
-  
-    div {
-      font-size: 1rem;
-    }
-  
-    input {
-      background-color: #eee;
-      border: none;
-      padding: 8px 15px;
-      margin: 6px 0;
-      width: calc(100% - 30px);
-      border-radius: 15px;
-      border-bottom: 1px solid #ddd;
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, .4), 
-        0 -1px 1px #fff, 
-        0 1px 0 #fff;
-      overflow: hidden;
-  
-      &:focus {
-        outline: none;
-        background-color: #fff;
-      }
+    transform: translateX($property);
+    transition: transform .5s ease-in-out;
+  }
+
+  .overlay-left {
+    @include overlays(-20%);
+  }
+
+  .overlay-right {
+    @include overlays(0);
+    right: 0;
+  }
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 20px 0 30px;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+  margin: 15px 0;
+  font-size: 1rem;
+}
+
+.button {
+  border-radius: 20px;
+  border: 1px solid $red;
+  background-color: $red;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform .1s ease-in;
+  margin-top: 10px;
+
+  &:active {
+    transform: scale(.9);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button.invert {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+form {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 90px 60px;
+  width: 50%;
+  text-align: center;
+  background: linear-gradient(to bottom, #efefef, #ccc);
+  transition: all .5s ease-in-out;
+
+  div {
+    font-size: 1rem;
+  }
+
+  input {
+    background-color: #eee;
+    border: none;
+    padding: 8px 15px;
+    margin: 6px 0;
+    width: calc(100% - 30px);
+    border-radius: 15px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .4),
+    0 -1px 1px #fff,
+    0 1px 0 #fff;
+    overflow: hidden;
+
+    &:focus {
+      outline: none;
+      background-color: #fff;
     }
   }
-  
+}
+
+.sign-in {
+  left: 0;
+  z-index: 2;
+}
+
+.sign-up {
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.sign-up-active {
   .sign-in {
-    left: 0;
-    z-index: 2;
+    transform: translateX(100%);
   }
-  
+
   .sign-up {
-    left: 0;
-    z-index: 1;
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show .5s;
+  }
+
+  .overlay-container {
+    transform: translateX(-100%);
+  }
+
+  .overlay {
+    transform: translateX(50%);
+  }
+
+  .overlay-left {
+    transform: translateX(0);
+  }
+
+  .overlay-right {
+    transform: translateX(20%);
+  }
+}
+
+@keyframes show {
+  0% {
     opacity: 0;
+    z-index: 1;
   }
-  
-  .sign-up-active {
-    .sign-in {
-      transform: translateX(100%);
-    }
-  
-    .sign-up {
-      transform: translateX(100%);
-      opacity: 1;
-      z-index: 5;
-      animation: show .5s;
-    }
-  
-    .overlay-container {
-      transform: translateX(-100%);
-    }
-  
-    .overlay {
-      transform: translateX(50%);
-    }
-  
-    .overlay-left {
-      transform: translateX(0);
-    }
-  
-    .overlay-right {
-      transform: translateX(20%);
-    }
+  49% {
+    opacity: 0;
+    z-index: 1;
   }
-  
-  @keyframes show {
-    0% {
-      opacity: 0;
-      z-index: 1;
-    }
-    49% {
-      opacity: 0;
-      z-index: 1;
-    }
-    50% {
-      opacity: 1;
-      z-index: 10;
-    }
+  50% {
+    opacity: 1;
+    z-index: 10;
   }
+}
+
 /*test component */
-.test-title{
+.test-title {
   color: #fff;
   margin-top: 50px;
   margin-bottom: 20px;
   text-align: center;
 }
+
 /*footer*/
-.footer{
+.footer {
   position: fixed;
   bottom: 0px;
   width: 100%;
   left: 0px;
   background: $dark;
   color: #fff;
-  
-  h2{
+
+  h2 {
     text-align: center;
+    margin-bottom: 10px;
   }
 }
 

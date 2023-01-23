@@ -8,5 +8,6 @@ namespace KeyMaster.Context
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
         {}
         public virtual DbSet<UserModel> Users { get; set; }
+        public virtual DbSet<ScoreModel> Scores { get; set; }
     }
 }

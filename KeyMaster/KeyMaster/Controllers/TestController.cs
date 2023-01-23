@@ -15,7 +15,7 @@ namespace KeyMaster.Controllers
         public ActionResult<QuotesModel> GetTest()
         {
             Random random = new Random();
-            var rand = random.Next(5);
+            var rand = random.Next(6);
             using (StreamReader r = new StreamReader("C:\\Users\\sebas\\Documents\\KeyMaster\\KeyMaster\\KeyMaster\\Lessons\\tests.json"))
             {
                 var jsonString = r.ReadToEnd();

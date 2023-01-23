@@ -5,34 +5,40 @@
         "length": 128,
         "id": 0
       },
-  {
-    "text": "Klawiatura jest to uporządkowany zestaw klawiszy służący do ręcznego sterowania urządzeniem lub ręcznego wprowadzania danych. W zależności od spełnianej funkcji klawiatura zawiera różnego rodzaju klawisze – alfabetyczne, cyfrowe, znaków specjalnych, funkcji specjalnych, o znaczeniu definiowanym przez użytkownika. Klawiatury występują w najróżniejszych urządzeniach – maszynach do pisania, kalkulatorach, telefonach komórkowych, tokenach; w szczególności jest to jeden z podzespołów wejściowych komputera. Aktualnie używane modele klawiatur komputerowych mają około 100 klawiszy. Coraz częściej w klawiatury komputerowe wbudowuje się dodatkowe elementy sterujące (dodatkowe przyciski) i kontrolne (diody świecące) - najczęściej dla obsługi multimediów. Szczególnego rodzaju klawiatury występują w instrumentach muzycznych – fortepianach, pianinach, klawesynach, trąbkach, akordeonach i in., a także w instrumentach elektronicznych. Klawiatury mogą mieć najróżniejszą konstrukcję: mechaniczne, historycznie najstarsze – ruch klawisza za pomocą mniej lub bardziej skomplikowanego systemu dźwigni, cięgien itp. układów mechanicznych bezpośrednio wykonuje czynność użyteczną (np. napęd dźwigni w maszynie do pisania, przestawienie tarczy w arytmometrze mechanicznym)  stykowe – ruch klawisza powoduje bezpośrednio zwarcie (lub, rzadziej, rozwarcie) w układzie elektrycznym/elektronicznym: sprężynowa membranowa – za pomocą klawisza dociskana jest do płytki drukowanej specjalna membrana zwierająca, realizująca także ruch powrotny klawisza z gumą przewodzącą (obecnie najbardziej rozpowszechnione) – wciśnięcie klawisza powoduje dociśnięcie gumy przewodzącej do obwodu drukowanego, powodując znaczne obniżenie rezystancji pomiędzy końcówkami pola stykowego bezstykowa optoelektroniczna pojemnościowa – obecnie stosowana rzadko – klawisz połączony jest z elementem zmieniającym pojemność współpracującego kondensatora najczęściej poprzez wsunięcie się między okładziny kontaktronowa – naciśnięcie klawisza powoduje przysunięcie magnesu do kontaktronu wymuszając zwarcie styków Na klawiaturze komputerowej każde naciśnięcie klawisza powoduje wysłanie sygnału do komputera. Każdy klawisz ma przypisany własny sygnał, zwany kodem. Najbardziej rozpowszechnionym w klawiaturach komputerowych kodem jest ASCII. Od pewnego czasu na rynku dostępne są klawiatury bezprzewodowe stosujące do komunikacji z komputerem podczerwień (musi być kontakt klawiatury z odbiornikiem sygnału) oraz fale radiowe (mogą to być znaczne odległości ok. 5 m). Najnowszym trendem jest łączenie klawiatur za pomocą standardu Bluetooth. Klawiatury wprowadzające znaki łacińskie występują najczęściej w tzw. układzie QWERTY (od pierwszych liter w lewym, górnym rogu klawiatury), rzadziej QWERTZ (klawiatury niemieckie czy polskie w tzw. układzie maszynistki) czy AZERTY (francuskie). Istnieją również inne układy klawiatur między innymi klawiatura Dvoraka której celem jest przyśpieszenie pisania. Układ znaków na klawiaturze klawiatury komputerowe odziedziczyły po klawiaturach mechanicznych maszyn do pisania – występował tam problem blokujących się dźwigni podczas szybkiego pisania, który próbowano rozwiązać poprzez umieszczenie klawiszy z najczęściej powtarzającymi się sekwencjami liter w taki sposób, by leżały możliwie daleko od siebie",
-    "source": "Albert Einstein",
-    "length": 122,
-    "id": 1
-  },
       {
-        "text": "Nasze życie jest takim, jakim uczyniły je nasze myśli.",
-        "source": "Marek Aureliusz",
-        "length": 54,
+        "text": "Klawiatura jest to uporządkowany zestaw klawiszy służący do ręcznego sterowania urządzeniem lub ręcznego wprowadzania danych. W zależności od spełnianej funkcji",
+        "source": "Albert Einstein",
+        "length": 122,
+        "id": 1
+      },
+      {
+        "text": "Czasem też napełniała go wielka wojna. Wówczas płynęły po nim jak fale czambuły tatarskie, pułki kozackie, to chorągwie polskie lub wołoskie; nocami rżenie koni wtórowało wyciom wilków, głos kotłów i trąb mosiężnych leciał aż do Owidowego jeziora i ku morzu, a na Czarnym Szlaku, na Kuczmańskim — rzekłbyś: powódź ludzka.Granic Rzeczypospolitej strzegły od Kamieńca aż do Dniepru stanice, „polanki” i — gdy szlaki miały się zaroić, poznawano właśnie po niezliczonych stadach ptactwa, które, płoszone przez czambuły, leciały na północ. Ale Tatar, byle wychylił się z Czarnego Lasu lub Dniestr przebył od strony wołoskiej, to stepem równo z ptakami stawał w południowych województwach.",
+        "source": "Ogniem i Mieczem H. Sienkiewicz",
+        "length": 683,
         "id": 2
       },
       {
-        "text": "Życie jest jak jazda na rowerze. Żeby utrzymać równowagę, musisz być w ciągłym ruchu.",
-        "source": "Albert Einstein",
-        "length": 85,
+        "text": "W Tyńcu, w gospodzie „Pod Lutym Turem”, należącej do opactwa, siedziało kilku ludzi, słuchając opowiadania wojaka bywalca, który z dalekich stron przybywszy, prawił im o przygodach, jakich na wojnie i w czasie podróży doznał. Człek był brodaty, w sile wieku, pleczysty, prawie ogromny, ale wychudły; włosy nosił ujęte w pątlik, czyli w siatkę naszywaną paciorkami; na sobie miał skórzany kubrak z pręgami wyciśniętymi przez pancerz, na nim pas, cały z miedzianych klamr; za pasem nóż w rogowej pochwie, przy boku zaś krótki kord podróżny.",
+        "source": "Krzyżacy Tom 1 H.Sienkiewicz",
+        "length": 538,
         "id": 3
       },
       {
-        "text": "Jeżeli robisz to co łatwe, Twoje życie będzie trudne. Jeśli robisz to co trudne, Twoje życie będzie łatwe.",
-        "source": "Les Brown",
-        "length": 106,
+        "text": "Geralt z Rivii był wiedźminem, choć nie takim, jakich zwykło się spotykać. Nie miał nic wspólnego z czarnoksiężnikami, którzy często próbowali wykorzystać jego zdolności do własnych celów, ani z potężnymi magami, którzy uważali go za niebezpiecznego barbarzyńcę. Geralt był człowiekiem, który poświęcił swoje życie, by zwalczać potwory i chronić ludzi. Był niezwykle silny, zwinny i sprytny, a jego sztylet, którym posługiwał się w walce, był jednym z najostrzejszych na świecie. Mimo swojej mocy, Geralt był człowiekiem skromnym i pełnym empatii, który działał zawsze w imię sprawiedliwości",
+        "source": "Wiedźmin A. Sapkowski",
+        "length": 591,
         "id": 4
       },
       {
-        "text": "Jest tylko jedna rzecz, która sprawia, że marzenie jest niemożliwe do osiągnięcia: strach przed porażką.",
-        "source": "Paulo Coelho",
-        "length": 104,
+        "text": "Aby pisać na klawiaturze w wygodny i zdrowy sposób, ważne jest poprawne ułożenie rąk. Dłonie powinny być skierowane prosto do przodu, a palce ułożone na klawiszach tak, aby naciskać je koniuszkami. Należy unikać pochylania dłoni do wewnątrz lub na zewnątrz. Ręce powinny być lekko uniesione nad klawiaturą. Pamiętaj o regularnej przerwie na rozciąganie i relaks dłoni.",
+        "source": "Nieznany",
+        "length": 368,
         "id": 5
+      },
+      {
+        "text": "Do not stand at my grave and weep I am not there. I do not sleep. I am a thousand winds that blow. I am the diamond glints on snow. I am the sunlight on ripened grain. I am the gentle autumn rain.When you awaken in the morning's hush I am the swift uplifting rush Of quiet birds in circled flight. I am the soft stars that shine at night. Do not stand at my grave and cry; I am not there. I did not die.",
+        "source": "Mary Elizabeth Frye",
+        "length": 404,
+        "id": 6
       }
-    ]
+]

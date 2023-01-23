@@ -10,7 +10,7 @@ namespace KeyMaster.Controllers
     [ApiController]
     public class LessonController : ControllerBase
     {
-        [HttpGet("{id}")]
+        [HttpGet("id")]
         public ActionResult<LessonModel> GetLesson(int id)
         {
             using (StreamReader r = new StreamReader("C:\\Users\\sebas\\Documents\\KeyMaster\\KeyMaster\\KeyMaster\\Lessons\\lessons.json"))
@@ -23,5 +23,19 @@ namespace KeyMaster.Controllers
                 return results.First(x => x.Id == id);
             }
         }
+        [HttpGet ("allLessons")]
+        public ActionResult<List<LessonModel>> GetLessons()
+        {
+            using (StreamReader r = new StreamReader("C:\\Users\\sebas\\Documents\\KeyMaster\\KeyMaster\\KeyMaster\\Lessons\\lessons.json"))
+            {
+                var jsonString = r.ReadToEnd();
+                var results = JsonConvert.DeserializeObject<List<LessonModel>>(jsonString);
+
+                if (results == null)
+                    return StatusCode(StatusCodes.Status404NotFound);
+                return results;
+            }
+        }
+
     }
 }

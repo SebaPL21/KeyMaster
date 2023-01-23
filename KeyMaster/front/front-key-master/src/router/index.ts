@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import { createAuth0, authGuard } from "@auth0/auth0-vue";
 import MainPage from "../views/MainPage.vue";
-import SignupPage from "../components/SignPage.vue";
+import SignupPage from "../views/SignPage.vue";
 import TestPage from "../views/Test.vue";
 import Profile from "../views/Profil.vue";
 import Lesson from "@/views/Lesson.vue";
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
@@ -13,22 +14,22 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/signup",
-    name: "SignupPage",
+    name: "signupPage",
     component: SignupPage,
   },
   {
     path: "/test",
-    name: "Test",
+    name: "test",
     component: TestPage,
   },
   {
     path: "/profile",
-    name: "Profile",
+    name: "profile",
     component: Profile,
   },
   {
-    path: "/Lesson",
-    name: "Leeson",
+    path: "/lesson/:lessonId",
+    name: "lesson",
     component: Lesson,
   },
 ];

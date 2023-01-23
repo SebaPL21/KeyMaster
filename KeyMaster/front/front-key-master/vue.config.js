@@ -41,7 +41,7 @@ module.exports = {
         changeOrigin: true,
       },
     },
-    port: 5001,
+    port: 5002,
   },
 
   pluginOptions: {
