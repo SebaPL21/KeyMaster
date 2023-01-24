@@ -9,10 +9,9 @@ namespace KeyMaster.Models
         public int ScoresID { get; set; }
         [ForeignKey("StandardRefId")]
         public int UserId { get; set; }
-        public int Wpm { get; set;}
+        public int Cpm { get; set;}
         public int Errors { get; set; }
-        public int Consistency { get; set; }
-        public int Mark { get; set; }
+        public int Accuracy { get; set; }
         public string TextTitle { get; set; }
         
     }

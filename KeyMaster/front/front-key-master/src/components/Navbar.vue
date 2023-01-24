@@ -20,11 +20,16 @@
         <router-link to="/test"><h2>Test</h2></router-link>
       </div>
       <div class="nav-signs-buttons">
-        <router-link to="/signup">
-          <button class="">Zaloguj się</button>
-        </router-link>
-        <div class="isloged">
-          <button class="" @click="logout()">Wyloguj się</button>
+        <div v-if="signIn" class="isloged">
+          <router-link to="/profile"
+            ><h2 class="userIsLogdOn">{{ username }}</h2></router-link
+          >
+          <button @click="logout()">Wyloguj się</button>
+        </div>
+        <div v-else>
+          <router-link to="/signup">
+            <button class="">Zaloguj się</button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -32,14 +37,17 @@
 </template>
 <style>
 .isloged {
-  display: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+button {
+  margin-left: 10px;
 }
 </style>
 <script lang="ts">
 import "@/styles/style.scss";
-import axios from "axios";
 import "vue-router/dist/vue-router";
-import router from "@/router";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -47,18 +55,40 @@ export default defineComponent({
   data() {
     return {
       lessons: {},
+      username: "",
+      signIn: false,
     };
   },
   created() {
     this.getAllLessons();
+    this.getUsername();
   },
   methods: {
+    logout() {
+      localStorage.clear();
+      this.signIn = false;
+    },
     getAllLessons() {
       this.axios
         .get("https://localhost:5001/api/lesson/allLessons")
         .then((resposne) => {
           this.lessons = resposne.data;
           //console.log(this.lessons);
+        });
+    },
+    getUsername() {
+      let token = "Bearer " + localStorage.getItem("token");
+      this.axios
+        .get("https://localhost:5001/api/user", {
+          headers: {
+            Authorization: token,
+            "content-type": "text/json",
+          },
+        })
+        .then((resposne) => {
+          console.log(resposne.data);
+          this.username = resposne.data.Nickname;
+          this.signIn = true;
         });
     },
   },

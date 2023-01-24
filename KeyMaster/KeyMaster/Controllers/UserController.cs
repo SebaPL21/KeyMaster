@@ -73,7 +73,7 @@ namespace KeyMaster.Controllers
         {
             var user = await _context.Users.FirstOrDefaultAsync(x => x.UserId == GetUserId());
             if (user == null) { return NotFound(); }
-            return Ok(new UserModel { Email = user.Email });
+            return Ok(new UserModel { Email = user.Email, Nickname = user.Nickname });
         }
     }
 }

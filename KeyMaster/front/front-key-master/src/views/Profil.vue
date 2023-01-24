@@ -16,17 +16,15 @@
             <th class="text-left">Tytul</th>
             <th class="text-left">Średnia prędkość WPM</th>
             <th class="text-left">Błędy</th>
-            <th class="text-left">Regularność</th>
-            <th class="text-left">Ocena</th>
+            <th class="text-left">Dokładność</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="item in scores" :key="item.id">
             <td>{{ item.TextTitle }}</td>
-            <td>{{ item.Wpm }}</td>
+            <td>{{ item.Cpm }}</td>
             <td>{{ item.Errors }}</td>
-            <td>{{ item.Consistency }}</td>
-            <td>{{ item.Mark }}</td>
+            <td>{{ item.Accuracy }}</td>
           </tr>
         </tbody>
       </v-table>
@@ -52,15 +50,11 @@ export default defineComponent({
     return {
       scores: {},
       textTitle: "",
-      consistency: 0,
-      wpm: 0,
-      mark: 0,
+      accuracy: 0,
+      cpm: 0,
       error: 0,
-      Date: "",
-      AvgScores: {
-        AvgSpeed: 0,
-        AvgAccuracy: 0,
-      },
+      AvgSpeed: 0,
+      AvgAccuracy: 0,
     };
   },
   created() {
