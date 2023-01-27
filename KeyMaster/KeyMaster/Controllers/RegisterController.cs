@@ -81,6 +81,7 @@ namespace KeyMaster.Controllers
             _context.Users.Add(userModel);
             await _context.SaveChangesAsync();
 
+
             return CreatedAtAction("GetUserModel", new { id = userModel.UserId }, userModel);
         }
 

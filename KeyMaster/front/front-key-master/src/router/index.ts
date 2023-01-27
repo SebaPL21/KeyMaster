@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import { createAuth0, authGuard } from "@auth0/auth0-vue";
-import MainPage from "../views/MainPage.vue";
+import MainPage from "../views/Exercises.vue";
 import SignupPage from "../views/SignPage.vue";
 import TestPage from "../views/Test.vue";
 import Profile from "../views/Profil.vue";

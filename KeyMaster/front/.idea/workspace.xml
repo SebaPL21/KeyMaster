@@ -5,28 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f3065f8-9d36-4710-bf63-64a39a280a42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/front-key-master/src/components/Chart.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-key-master/src/views/Exercises.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.futdcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/v17/fileList.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/v17/fileList.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.metadata.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.metadata.v5.2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.projects.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.projects.v5.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KeyMaster/Controllers/ScoresModelsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/Controllers/ScoresModelsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KeyMaster/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KeyMaster/Models/ScoreModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/Models/ScoreModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/Controllers/RegisterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/Controllers/RegisterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/ref/KeyMaster.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/ref/KeyMaster.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/refint/KeyMaster.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/refint/KeyMaster.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-key-master/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-key-master/src/components/Chart.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/components/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-key-master/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/router/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/styles/content.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/styles/content.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/styles/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/views/Lesson.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/Lesson.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/views/MainPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/MainPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/views/Profil.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/Profil.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-key-master/src/views/MainPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-key-master/src/views/Test.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/Test.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,29 +53,32 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2KEClgzAJ7p7Er1yQl7x3MrSOXO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/sebas/Documents/KeyMaster/KeyMaster/front",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "C:\\Users\\sebas\\Documents\\KeyMaster\\KeyMaster\\front\\front-key-master\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sebas/Documents/KeyMaster/KeyMaster/front&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\sebas\\Documents\\KeyMaster\\KeyMaster\\front\\front-key-master\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sebas\Documents\KeyMaster\KeyMaster\front\front-key-master\src\views" />
@@ -110,6 +117,12 @@
       <workItem from="1674431128985" duration="2886000" />
       <workItem from="1674472426231" duration="26229000" />
       <workItem from="1674555252776" duration="27698000" />
+      <workItem from="1674653728918" duration="14346000" />
+      <workItem from="1674682017870" duration="1904000" />
+      <workItem from="1674731138966" duration="4339000" />
+      <workItem from="1674745032270" duration="14889000" />
+      <workItem from="1674764121334" duration="3096000" />
+      <workItem from="1674810896565" duration="8647000" />
     </task>
     <servers />
   </component>
