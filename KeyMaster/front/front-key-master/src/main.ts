@@ -14,4 +14,5 @@ createApp(App)
   .use(store)
   .use(vuetify)
   .use(VueAxios, axios)
+
   .mount("#app");

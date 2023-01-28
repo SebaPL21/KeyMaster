@@ -65,6 +65,9 @@
         <div class="key" data-key="alt" id="alt">alt</div>
       </div>
     </div>
+    <v-btn variant="outlined" color="#C03E3FFF" @click="exportToCsv()"
+      >Pobież statystyki
+    </v-btn>
     <div>
       <div class="chart">
         <canvas id="myChart"></canvas>
@@ -103,6 +106,7 @@ import Footer from "@/components/Footer.vue";
 import "/src/styles/style.scss";
 import { defineComponent, onMounted, ref } from "vue";
 import { Chart } from "chart.js/auto";
+import Papa from "papaparse";
 
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
@@ -323,8 +327,8 @@ export default defineComponent({
           },
           {
             label: "Wykres blędów",
-            data: speedData,
-            borderColor: "rgb(192,75,75)",
+            data: this.errorPosition,
+            borderColor: "rgb(34,43,213)",
             tension: 0.1,
           },
         ],
@@ -341,6 +345,23 @@ export default defineComponent({
         },
       });
       myChart;
+    },
+    exportToCsv() {
+      const data = [
+        {
+          avgSpeed: this.TypingSpeed,
+          errors: this.statisticErrors,
+          avgAccuracy: this.StatisticAccuracy,
+          time: this.time,
+          CPM: this.StatisticClicksPerMinute,
+        },
+      ];
+      const csv = Papa.unparse(data);
+      const blob = new Blob([csv]);
+      const link = document.createElement("a");
+      link.href = window.URL.createObjectURL(blob);
+      link.download = "data.csv";
+      link.click();
     },
   },
 });

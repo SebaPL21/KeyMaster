@@ -11,6 +11,9 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
+    //
+    "noImplicitAny": false,
+    //last change papa parse
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
