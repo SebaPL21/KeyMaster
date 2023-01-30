@@ -62,6 +62,8 @@ builder.Services.Configure<IdentityOptions>(opts =>
 {
     opts.SignIn.RequireConfirmedEmail = true;
 });
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

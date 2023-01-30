@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using KeyMaster.Context;
 using KeyMaster.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace KeyMaster.Controllers
 {
@@ -80,7 +81,6 @@ namespace KeyMaster.Controllers
         {
             _context.Users.Add(userModel);
             await _context.SaveChangesAsync();
-
 
             return CreatedAtAction("GetUserModel", new { id = userModel.UserId }, userModel);
         }

@@ -15,7 +15,7 @@ namespace KeyMaster.Models
             mailMessage.Body = confirmationLink;
 
             SmtpClient client = new SmtpClient();
-            client.Credentials = new System.Net.NetworkCredential("care@yogihosting.com", "yourpassword");
+            client.Credentials = new System.Net.NetworkCredential("ticare@yogihosng.com", "yourpassword");
             client.Host = "smtpout.secureserver.net";
             client.Port = 80;
 

@@ -2,11 +2,11 @@
   <Navbar></Navbar>
   <div class="test-title">
     <h1>Ćwiczenia</h1>
-    <h2>tutaj bedziesz ćwiczyć na którtkich tesktach</h2>
+    <h2></h2>
   </div>
   <div class="lesson-container">
     <div class="quote">
-      <h3>Długość lekcji {{ length }}</h3>
+      <h3>Ilość znaków: {{ length }}</h3>
       <span class="word" v-for="text in text2">
         {{ text }}
       </span>
@@ -49,7 +49,7 @@
         <div class="key" data-key=";" id="colon">;</div>
       </div>
       <div class="row">
-        <div class="key special" data-key="shift">shift</div>
+        <div class="key special" data-key="shift" id="shift">shift</div>
         <div class="key" data-key="z" id="z">z</div>
         <div class="key" data-key="x" id="x">x</div>
         <div class="key" data-key="c" id="c">c</div>
@@ -66,7 +66,7 @@
       </div>
     </div>
     <v-btn variant="outlined" color="#C03E3FFF" @click="exportToCsv()"
-      >Pobież statystyki
+      >Pobierz statystyki
     </v-btn>
     <div>
       <div class="chart">
@@ -107,6 +107,7 @@ import "/src/styles/style.scss";
 import { defineComponent, onMounted, ref } from "vue";
 import { Chart } from "chart.js/auto";
 import Papa from "papaparse";
+import * as events from "events";
 
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
@@ -133,59 +134,18 @@ export default defineComponent({
       clicks: 0,
       startTime: Date.now(),
       errorPosition: [{ x: 0, y: 0 }],
-      TypingSpeed: [0],
+      TypingSpeed: [{ x: 0, y: 0 }],
       afterLesson: false,
       timeoutId: 0,
       labels: [""],
+      labelsSpeed: [""],
       time: 0,
       keyList: [],
+      wpm: 0,
       space: document.getElementById("space"),
       colon: document.getElementById("colon"),
       coma: document.getElementById("coma"),
-    };
-  },
-  created() {
-    this.fetchquote();
-    this.checkForMistakes();
-  },
-  watch: {
-    // call again the method if the route changes
-    $route: "fetchData",
-    inputText: "checkForMistakes",
-  },
-
-  methods: {
-    fetchquote() {
-      this.axios
-        .get("https://localhost:5001/api/quotes/fetch")
-        .then((resposne) => {
-          // console.log(resposne.data);
-          this.source = resposne.data.Source;
-          this.text = resposne.data.Text;
-          this.length = resposne.data.Length;
-          this.text2 = resposne.data.Text.split("");
-        });
-    },
-    addtoscores() {
-      let token = "Bearer " + localStorage.getItem("token");
-      this.axios.post(
-        "https://localhost:5001/api/ScoresModels",
-        {
-          Cpm: this.StatisticKeyboardClicks,
-          Errors: this.error,
-          Accuracy: this.StatisticAccuracy.toFixed(0),
-          TextTitle: this.source,
-        },
-        {
-          headers: {
-            Authorization: token,
-            "content-type": "text/json",
-          },
-        }
-      );
-    },
-    checkForMistakes() {
-      let lettersDictionary: { [key: string]: string[] } = {
+      lettersDictionary: {
         a: ["a"],
         ą: ["alt", "a"],
         b: ["b"],
@@ -220,83 +180,121 @@ export default defineComponent({
         y: ["y"],
         z: ["z"],
         ż: ["alt", "z"],
-        coma: [","],
-        space: [" "],
+        ",": ["coma"],
+        " ": ["space"],
         alt: ["alt"],
-        colon: [";"],
-        dot: ["."],
-      };
-      this.countClicksPerMinute();
+        ":": ["shift", "colon"],
+        ";": ["colon"],
+        ".": ["dot"],
+      },
+    };
+  },
+  created() {
+    this.fetchquote();
+  },
+  watch: {
+    $route: "fetchData",
+    inputText: "checkForMistakes",
+  },
+
+  methods: {
+    fetchquote() {
+      this.axios
+        .get("https://localhost:5001/api/quotes/fetch")
+        .then((resposne) => {
+          // console.log(resposne.data);
+          this.source = resposne.data.Source;
+          this.text = resposne.data.Text;
+          this.length = resposne.data.Length;
+          this.text2 = resposne.data.Text.split("");
+          this.checkForMistakes();
+        });
+    },
+    addtoscores() {
+      let token = "Bearer " + localStorage.getItem("token");
+      this.axios.post(
+        "https://localhost:5001/api/ScoresModels",
+        {
+          Cpm: this.StatisticKeyboardClicks,
+          Errors: this.error,
+          Accuracy: this.StatisticAccuracy.toFixed(0),
+          TextTitle: this.source,
+        },
+        {
+          headers: {
+            Authorization: token,
+            "content-type": "text/json",
+          },
+        }
+      );
+    },
+    checkForMistakes() {
+      let avgSpeed = this.countClicksPerMinute();
       var textArray = this.text.split("");
       var inputTextArray = this.inputText.split("");
-      //this.resetKeys(this.keyList);
       var errottmp = 0;
       var failAt = 0;
       let errorpos = [{ x: 0, y: 0 }];
+      let typeSpeed = [{ x: 0, y: 0 }];
       let spanClass = document.getElementsByClassName("word");
-      for (let i = 0; i < inputTextArray.length; i++) {
-        if (inputTextArray[i] != textArray[i]) {
-          errottmp++;
-          this.statisticErrors++;
-          failAt = i;
-          spanClass[i].setAttribute("class", "incorect word");
-          errorpos.push({ x: failAt, y: errottmp });
-        } else {
-          spanClass[i].setAttribute("class", "correct word");
+      Array.from(spanClass).forEach((element) => {
+        element.setAttribute("class", "word");
+      });
+      for (let i = -1; i < inputTextArray.length; i++) {
+        if (i >= 0) {
+          if (inputTextArray[i] != textArray[i]) {
+            errottmp++;
+            this.statisticErrors++;
+            failAt = i;
+            spanClass[i].setAttribute("class", "incorect word");
+            errorpos.push({ x: failAt, y: errottmp });
+            typeSpeed.push({ x: i, y: this.wpm });
+          } else {
+            errorpos.push({ x: failAt, y: errottmp });
+            typeSpeed.push({ x: i, y: this.wpm });
+            spanClass[i].setAttribute("class", "correct word");
+          }
         }
-        // let nextLetter = textArray[i + 1];
-        // let previousLetter = textArray[i];
-        // let nextCombination = lettersDictionary[nextLetter];
-        // console.log(lettersDictionary[nextLetter]);
-        // if (nextLetter === " ") {
-        //   this.keyList.push("space");
-        //   document
-        //     .getElementById("space")
-        //     .setAttribute("class", "space keyToPress");
-        // } else if (nextLetter === ",") {
-        //   this.keyList.push(",");
-        //   this.coma.classList.add("class", "keyToPress");
-        // } else if (nextLetter === ";") {
-        //   this.keyList.push(";");
-        //   this.colon.setAttribute("class", "keyToPress");
-        // } else {
-        //   if (nextCombination.length > 1) {
-        //     nextCombination.forEach((item) => {
-        //       this.keyList.push(item);
-        //       console.log(item);
-        //       document.getElementById(item).setAttribute("class", "keyToPress");
-        //     });
-        //   } else {
-        //     document
-        //       .getElementById(nextCombination[0])
-        //       .setAttribute("class", "keyToPress");
-        //     this.keyList.push(nextCombination[0]);
-        //   }
-        // }
-      }
 
+        let nextLetter = textArray[i + 1];
+        let clickedKeys = document.getElementsByClassName("key active");
+        let keyCodes = Object.keys(this.lettersDictionary).map((element) => {
+          return element.charCodeAt(0);
+        });
+        Array.from(clickedKeys).forEach((x) => {
+          x.classList.remove("active");
+        });
+
+        if (keyCodes.includes(nextLetter.toLowerCase().charCodeAt(0))) {
+          this.lettersDictionary[nextLetter.toLowerCase()].forEach(
+            (element) => {
+              document.getElementById(element).classList.add("active");
+            }
+          );
+          if (nextLetter.match(/[A-ZĄĆĘŁŃÓŚŹŻ]/)) {
+            document.getElementById("shift").classList.add("active");
+          }
+        }
+      }
       this.error = errottmp;
-      let toReset = document.getElementsByClassName("keyToPress");
       this.errorPosition = errorpos;
+      this.TypingSpeed = typeSpeed;
       this.StatisticKeyboardClicks++;
       if (inputTextArray.length != 0 && inputTextArray.length == this.length) {
         this.isEnabled = true;
         this.afterLesson = true;
-        this.countAccutacy();
+        this.countAccuracy();
         this.errorPosition.forEach((i) => {
           this.labels.push(i.x.toString());
+        });
+        this.TypingSpeed.forEach((s) => {
+          this.labelsSpeed.push(s.x.toString());
         });
         this.drawChart();
         this.addtoscores();
       }
-      // this.resetKeys(this.keyList);
     },
-    // resetKeys(array: string[]) {
-    //   console.log(array);
-    //   array.forEach((x) => {
-    //     document.getElementById(x).setAttribute("class", "key");
-    //   });
-    // },
+
     countClicksPerMinute() {
       this.clicks++;
       let currentTime = Date.now();
@@ -305,10 +303,10 @@ export default defineComponent({
       let cpm = Math.round(clicksPerMinute);
       this.time = Math.round((currentTime - this.startTime) / 1000);
       this.StatisticClicksPerMinute = cpm;
-      this.TypingSpeed.push(cpm);
-      //console.log(this.TypingSpeed);
+      this.wpm = cpm / 5;
+      return cpm;
     },
-    countAccutacy() {
+    countAccuracy() {
       console.log((this.length - this.error) / this.length);
       let acc = ((this.length - this.error) / this.length) * 100;
       let accuracy = Math.round(acc);
@@ -317,18 +315,18 @@ export default defineComponent({
     drawChart() {
       const ctx = "myChart";
       const data = {
-        labels: this.labels,
+        labels: this.labelsSpeed,
         datasets: [
           {
-            label: "Wykres blędów",
+            label: "Błędy",
             data: this.errorPosition,
             borderColor: "rgb(192,75,75)",
             tension: 0.1,
           },
           {
-            label: "Wykres blędów",
-            data: this.errorPosition,
-            borderColor: "rgb(34,43,213)",
+            label: "Wpm",
+            data: this.TypingSpeed,
+            borderColor: "rgb(54,122,224)",
             tension: 0.1,
           },
         ],
@@ -349,11 +347,12 @@ export default defineComponent({
     exportToCsv() {
       const data = [
         {
-          avgSpeed: this.TypingSpeed,
           errors: this.statisticErrors,
           avgAccuracy: this.StatisticAccuracy,
           time: this.time,
           CPM: this.StatisticClicksPerMinute,
+          WPm: this.wpm,
+          title: this.source,
         },
       ];
       const csv = Papa.unparse(data);

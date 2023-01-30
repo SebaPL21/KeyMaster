@@ -141,7 +141,7 @@ export default defineComponent({
       if (inputTextArray.length != 0 && inputTextArray.length == this.length) {
         this.isEnabled = true;
         this.afterLesson = true;
-        this.countAccutacy();
+        this.countAccuracy();
         this.errorPosition.forEach((i) => {
           this.labels.push(i.x.toString());
         });
@@ -158,7 +158,7 @@ export default defineComponent({
       let cpm = Math.round(clicksPerMinute);
       this.StatisticClicksPerMinute = cpm;
     },
-    countAccutacy() {
+    countAccuracy() {
       console.log((this.length - this.error) / this.length);
       let acc = ((this.length - this.error) / this.length) * 100;
       let accuracy = Math.round(acc);

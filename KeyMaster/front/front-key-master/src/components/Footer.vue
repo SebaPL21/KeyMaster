@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <h2>Dzięki za wspólną naukę :)</h2>
+    <h3>Sebastian Płaza @ 2023</h3>
   </div>
 </template>
 <script lang="ts">

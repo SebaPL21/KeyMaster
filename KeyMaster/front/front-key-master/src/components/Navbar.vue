@@ -3,7 +3,6 @@
     <div class="nav">
       <router-link to="/"><h1 class="logo">KeyMaster</h1></router-link>
       <div class="nav-links">
-        <router-link to="/exercises"><h2>Ćwiczenia</h2></router-link>
         <h2 id="menu-activator">Lekcje</h2>
         <v-menu activator="#menu-activator">
           <v-list class="lessonList">
@@ -18,7 +17,7 @@
           </v-list>
         </v-menu>
 
-        <router-link to="/test"><h2>Test</h2></router-link>
+        <router-link to="/test"><h2>Test szybkości</h2></router-link>
       </div>
       <div class="nav-signs-buttons">
         <div v-if="signIn" class="isloged">

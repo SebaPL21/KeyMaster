@@ -13,6 +13,7 @@
     "useDefineForClassFields": true,
     //
     "noImplicitAny": false,
+    "strictNullChecks": false,
     //last change papa parse
     "sourceMap": true,
     "baseUrl": ".",

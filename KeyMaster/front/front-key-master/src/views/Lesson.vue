@@ -1,7 +1,7 @@
 <template>
   <Navbar></Navbar>
   <div class="test-title">
-    <h1>Witaj na stronie lekcyjnej.</h1>
+    <h1>Witaj na ćwiczeniach.</h1>
     <p>
       Tutaj będziesz mógł/mogła poprawić swoją techinike oraz ułożenie rąk na
       klawiaturze
@@ -145,7 +145,7 @@ export default defineComponent({
       if (inputTextArray.length != 0 && inputTextArray.length == this.length) {
         this.isEnabled = true;
         this.afterLesson = true;
-        this.countAccutacy();
+        this.countAccuracy();
         this.errorPosition.forEach((i) => {
           this.labels.push(i.x.toString());
         });
@@ -162,7 +162,7 @@ export default defineComponent({
       let cpm = Math.round(clicksPerMinute);
       this.StatisticClicksPerMinute = cpm;
     },
-    countAccutacy() {
+    countAccuracy() {
       console.log((this.length - this.error) / this.length);
       let acc = ((this.length - this.error) / this.length) * 100;
       let accuracy = Math.round(acc);
