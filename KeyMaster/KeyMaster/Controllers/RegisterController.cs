@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using KeyMaster.Context;
 using KeyMaster.Models;
-using Microsoft.AspNetCore.Identity;
 
 namespace KeyMaster.Controllers
 {
@@ -76,7 +75,7 @@ namespace KeyMaster.Controllers
 
         // POST: api/Register
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost ("register")]
+        [HttpPost("register")]
         public async Task<ActionResult<UserModel>> PostUserModel(UserModel userModel)
         {
             _context.Users.Add(userModel);

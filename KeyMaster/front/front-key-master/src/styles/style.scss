@@ -28,7 +28,6 @@ html {
 .nav {
   display: flex;
   width: 1080px;
-  justify-content: space-around;
   margin: auto;
   align-items: center;
 }
@@ -405,7 +404,7 @@ form {
 }
 
 .active {
-  background-color: #ff0000 !important;
+  background-color: #c03e3f !important;
   color: white;
 }
 

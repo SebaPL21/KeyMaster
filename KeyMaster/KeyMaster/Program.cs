@@ -83,6 +83,7 @@ app.UseCors(builder =>
     .AllowAnyMethod()
     .AllowAnyHeader();
 });
+
 app.UseAuthentication();
 app.UseAuthorization();
 

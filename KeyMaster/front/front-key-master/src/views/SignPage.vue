@@ -25,12 +25,13 @@
         <input type="text" v-model="nick" placeholder="Nick" />
         <input type="email" v-model="email" placeholder="Email" />
         <input type="password" v-model="password" placeholder="Hasło" />
-        <button class="button">Rejestracja</button>
+
+        <button class="button" @click="sendEmail()">Rejestracja</button>
       </form>
       <form class="sign-in" @submit.prevent="submitLoginForm()">
         <h2>Zaloguj się</h2>
         <div>Podaj dane swojego konta</div>
-        <input v-model="email" name="email" placeholder="Email" />
+        <input type="email" v-model="email" name="email" placeholder="Email" />
         <input
           type="password"
           v-model="password"
@@ -48,6 +49,8 @@ import "@/styles/style.scss";
 import axios from "axios";
 import "vue-router/dist/vue-router";
 import router from "@/router";
+import emailjs from "emailjs-com";
+
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -93,6 +96,34 @@ export default defineComponent({
         .catch((error) => {
           console.log(error);
         });
+    },
+    // sendEmail() {
+    //   Email.send({
+    //     Host: "sandbox.smtp.mailtrap.io",
+    //     Username: "93e88b8394ec23",
+    //     Password: "7e7d4338ccbcef",
+    //     To: "recipient@example.com",
+    //     From: "sender@example.com",
+    //     Subject: "Test email",
+    //     Body: "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>",
+    //   }).then((message) => alert(message));
+    // },
+    sendEmail() {
+      try {
+        console.log("dupa");
+        emailjs.send(
+          "service_okkj1vs",
+          "template_cqt7rsp",
+          {
+            name: this.nick,
+            email: this.email,
+            message: "Weryfikacja konta <button> Zweryfikuj maila </button> ",
+          },
+          "k8R68iqRUP5AQf5tB"
+        );
+      } catch (error) {
+        console.log({ error });
+      }
     },
   },
 });

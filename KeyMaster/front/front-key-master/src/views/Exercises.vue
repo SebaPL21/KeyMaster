@@ -1,8 +1,8 @@
 <template>
   <Navbar></Navbar>
   <div class="test-title">
-    <h1>Ćwiczenia</h1>
-    <h2></h2>
+    <h1>Krótkie Ćwiczenia</h1>
+    <h3></h3>
   </div>
   <div class="lesson-container">
     <div class="quote">
@@ -65,14 +65,17 @@
         <div class="key" data-key="alt" id="alt">alt</div>
       </div>
     </div>
-    <v-btn variant="outlined" color="#C03E3FFF" @click="exportToCsv()"
-      >Pobierz statystyki
-    </v-btn>
+    <!--    <v-btn variant="outlined" color="#C03E3FFF" @click="exportToCsv()"-->
+    <!--      >Pobierz statystyki-->
+    <!--    </v-btn>-->
     <div>
       <div class="chart">
         <canvas id="myChart"></canvas>
       </div>
       <div class="afterLessonStats" v-if="afterLesson">
+        <v-btn variant="outlined" color="#C03E3FFF" @click="exportToCsv()"
+          >Pobierz statystyki
+        </v-btn>
         <h2>Popełnione błędy {{ error }}</h2>
         <h2>Dokładność {{ StatisticAccuracy }} %</h2>
         <h2>CPM {{ StatisticClicksPerMinute }}</h2>
@@ -264,15 +267,19 @@ export default defineComponent({
         Array.from(clickedKeys).forEach((x) => {
           x.classList.remove("active");
         });
-
-        if (keyCodes.includes(nextLetter.toLowerCase().charCodeAt(0))) {
-          this.lettersDictionary[nextLetter.toLowerCase()].forEach(
-            (element) => {
-              document.getElementById(element).classList.add("active");
+        console.log(nextLetter);
+        if (nextLetter == undefined) {
+          break;
+        } else {
+          if (keyCodes.includes(nextLetter.toLowerCase().charCodeAt(0))) {
+            this.lettersDictionary[nextLetter.toLowerCase()].forEach(
+              (element) => {
+                document.getElementById(element).classList.add("active");
+              }
+            );
+            if (nextLetter.match(/[A-ZĄĆĘŁŃÓŚŹŻ]/)) {
+              document.getElementById("shift").classList.add("active");
             }
-          );
-          if (nextLetter.match(/[A-ZĄĆĘŁŃÓŚŹŻ]/)) {
-            document.getElementById("shift").classList.add("active");
           }
         }
       }
