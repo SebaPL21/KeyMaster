@@ -65,9 +65,6 @@
         <div class="key" data-key="alt" id="alt">alt</div>
       </div>
     </div>
-    <!--    <v-btn variant="outlined" color="#C03E3FFF" @click="exportToCsv()"-->
-    <!--      >Pobierz statystyki-->
-    <!--    </v-btn>-->
     <div>
       <div class="chart">
         <canvas id="myChart"></canvas>
@@ -145,9 +142,6 @@ export default defineComponent({
       time: 0,
       keyList: [],
       wpm: 0,
-      space: document.getElementById("space"),
-      colon: document.getElementById("colon"),
-      coma: document.getElementById("coma"),
       lettersDictionary: {
         a: ["a"],
         ą: ["alt", "a"],
@@ -267,7 +261,6 @@ export default defineComponent({
         Array.from(clickedKeys).forEach((x) => {
           x.classList.remove("active");
         });
-        console.log(nextLetter);
         if (nextLetter == undefined) {
           break;
         } else {

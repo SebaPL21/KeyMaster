@@ -86,7 +86,6 @@ export default defineComponent({
           },
         })
         .then((resposne) => {
-          console.log(resposne.data);
           this.username = resposne.data.Nickname;
           this.signIn = true;
         });

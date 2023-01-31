@@ -9,32 +9,77 @@
   </div>
   <div class="lesson-container">
     <div class="quote">
-      {{ text }}
+      <h3>Ilość znaków: {{ length }}</h3>
+      <span class="word" v-for="text in text2">
+        {{ text }}
+      </span>
       <div class="autor">
         {{ source }}
-        {{ length }}
       </div>
     </div>
-
     <div class="inputlesson">
       <input
         type="text"
         class="wordInput"
         v-model="inputText"
         :maxlength="length"
-        @keyup="checkForMistakes()"
+        :disabled="isEnabled"
       />
-      <!--      {{ error }}-->
-      <!--      {{ statisticErrors }}-->
+    </div>
+    <div id="keyboard">
+      <div class="row">
+        <div class="key" data-key="q" id="q">q</div>
+        <div class="key" data-key="w" id="w">w</div>
+        <div class="key" data-key="e" id="e">e</div>
+        <div class="key" data-key="r" id="r">r</div>
+        <div class="key" data-key="t" id="t">t</div>
+        <div class="key" data-key="y" id="y">y</div>
+        <div class="key" data-key="u" id="u">u</div>
+        <div class="key" data-key="i" id="i">i</div>
+        <div class="key" data-key="o" id="o">o</div>
+        <div class="key" data-key="p" id="p">p</div>
+      </div>
+      <div class="row">
+        <div class="key" data-key="a" id="a">a</div>
+        <div class="key" data-key="s" id="s">s</div>
+        <div class="key" data-key="d" id="d">d</div>
+        <div class="key" data-key="f" id="f">f</div>
+        <div class="key" data-key="g" id="g">g</div>
+        <div class="key" data-key="h" id="h">h</div>
+        <div class="key" data-key="j" id="j">j</div>
+        <div class="key" data-key="k" id="k">k</div>
+        <div class="key" data-key="lk" id="l">l</div>
+        <div class="key" data-key=";" id="colon">;</div>
+      </div>
+      <div class="row">
+        <div class="key special" data-key="shift" id="shift">shift</div>
+        <div class="key" data-key="z" id="z">z</div>
+        <div class="key" data-key="x" id="x">x</div>
+        <div class="key" data-key="c" id="c">c</div>
+        <div class="key" data-key="v" id="v">v</div>
+        <div class="key" data-key="b" id="b">b</div>
+        <div class="key" data-key="n" id="n">n</div>
+        <div class="key" data-key="m" id="m">m</div>
+        <div class="key" data-key="," id="coma">,</div>
+        <div class="key" data-key="." id="dot">.</div>
+      </div>
+      <div class="row">
+        <div class="key space" data-key=" " id="space">space</div>
+        <div class="key" data-key="alt" id="alt">alt</div>
+      </div>
     </div>
     <div>
       <div class="chart">
         <canvas id="myChart"></canvas>
       </div>
       <div class="afterLessonStats" v-if="afterLesson">
+        <v-btn variant="outlined" color="#C03E3FFF" @click="exportToCsv()"
+          >Pobierz statystyki
+        </v-btn>
         <h2>Popełnione błędy {{ error }}</h2>
         <h2>Dokładność {{ StatisticAccuracy }} %</h2>
         <h2>CPM {{ StatisticClicksPerMinute }}</h2>
+        <h2>Czas pisania {{ time }}s</h2>
       </div>
     </div>
   </div>
@@ -46,6 +91,7 @@ import { defineComponent } from "vue";
 import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
 import { Chart } from "chart.js/auto";
+import Papa from "papaparse";
 
 export default defineComponent({
   components: {
@@ -56,6 +102,7 @@ export default defineComponent({
     return {
       result: "",
       text: "",
+      text2: [],
       source: "",
       length: 0,
       inputText: "",
@@ -67,12 +114,59 @@ export default defineComponent({
       StatisticAccuracy: 0,
       Mark: 0,
       isEnabled: false,
+      TypingSpeed: [{ x: 0, y: 0 }],
       clicks: 0,
       startTime: Date.now(),
       errorPosition: [{ x: 0, y: 0 }],
       afterLesson: false,
       timeoutId: 0,
       labels: [""],
+      labelsSpeed: [""],
+      time: 0,
+      keyList: [],
+      wpm: 0,
+      lettersDictionary: {
+        a: ["a"],
+        ą: ["alt", "a"],
+        b: ["b"],
+        c: ["c"],
+        ć: ["alt", "c"],
+        d: ["d"],
+        e: ["e"],
+        ę: ["alt", "e"],
+        f: ["f"],
+        g: ["g"],
+        h: ["h"],
+        i: ["i"],
+        j: ["j"],
+        k: ["k"],
+        l: ["l"],
+        ł: ["alt", "l"],
+        m: ["m"],
+        n: ["n"],
+        ń: ["alt", "n"],
+        o: ["o"],
+        ó: ["alt", "o"],
+        p: ["p"],
+        q: ["q"],
+        r: ["r"],
+        s: ["s"],
+        ś: ["alt", "s"],
+        t: ["t"],
+        u: ["u"],
+        v: ["v"],
+        w: ["w"],
+        x: ["x"],
+        y: ["y"],
+        z: ["z"],
+        ż: ["alt", "z"],
+        ",": ["coma"],
+        " ": ["space"],
+        alt: ["alt"],
+        ":": ["shift", "colon"],
+        ";": ["colon"],
+        ".": ["dot"],
+      },
     };
   },
   created() {
@@ -80,6 +174,7 @@ export default defineComponent({
   },
   watch: {
     $route: "fetchquote",
+    inputText: "checkForMistakes",
   },
   methods: {
     getlessonId() {
@@ -95,10 +190,11 @@ export default defineComponent({
           params: { id: this.$route.params.lessonId },
         })
         .then((resposne) => {
-          console.log(resposne.data);
           this.source = resposne.data.Source;
           this.text = resposne.data.Text;
+          this.text2 = resposne.data.Text.split("");
           this.length = resposne.data.Length;
+          this.checkForMistakes();
         });
     },
     addtoscores() {
@@ -120,27 +216,59 @@ export default defineComponent({
       );
     },
     checkForMistakes() {
-      this.countClicksPerMinute();
+      let avgSpeed = this.countClicksPerMinute();
       var textArray = this.text.split("");
       var inputTextArray = this.inputText.split("");
       var errottmp = 0;
       var failAt = 0;
       let errorpos = [{ x: 0, y: 0 }];
-      for (let i = 0; i < inputTextArray.length; i++) {
-        if (inputTextArray[i] != textArray[i]) {
-          errottmp++;
-          this.statisticErrors++;
-          console.log("błąd");
-          failAt = i;
-          errorpos.push({ x: failAt, y: errottmp });
+      let typeSpeed = [{ x: 0, y: 0 }];
+      let spanClass = document.getElementsByClassName("word");
+      Array.from(spanClass).forEach((element) => {
+        element.setAttribute("class", "word");
+      });
+      for (let i = -1; i < inputTextArray.length; i++) {
+        if (i >= 0) {
+          if (inputTextArray[i] != textArray[i]) {
+            errottmp++;
+            this.statisticErrors++;
+            failAt = i;
+            spanClass[i].setAttribute("class", "incorect word");
+            errorpos.push({ x: failAt, y: errottmp });
+            typeSpeed.push({ x: i, y: this.wpm });
+          } else {
+            errorpos.push({ x: failAt, y: errottmp });
+            typeSpeed.push({ x: i, y: this.wpm });
+            spanClass[i].setAttribute("class", "correct word");
+          }
+        }
+
+        let nextLetter = textArray[i + 1];
+        let clickedKeys = document.getElementsByClassName("key active");
+        let keyCodes = Object.keys(this.lettersDictionary).map((element) => {
+          return element.charCodeAt(0);
+        });
+        Array.from(clickedKeys).forEach((x) => {
+          x.classList.remove("active");
+        });
+        if (nextLetter == undefined) {
+          break;
         } else {
-          console.log("git ");
+          if (keyCodes.includes(nextLetter.toLowerCase().charCodeAt(0))) {
+            this.lettersDictionary[nextLetter.toLowerCase()].forEach(
+              (element) => {
+                document.getElementById(element).classList.add("active");
+              }
+            );
+            if (nextLetter.match(/[A-ZĄĆĘŁŃÓŚŹŻ]/)) {
+              document.getElementById("shift").classList.add("active");
+            }
+          }
         }
       }
       this.error = errottmp;
-
       this.errorPosition = errorpos;
-      console.log(this.labels);
+      this.TypingSpeed = typeSpeed;
       this.StatisticKeyboardClicks++;
       if (inputTextArray.length != 0 && inputTextArray.length == this.length) {
         this.isEnabled = true;
@@ -149,7 +277,9 @@ export default defineComponent({
         this.errorPosition.forEach((i) => {
           this.labels.push(i.x.toString());
         });
-
+        this.TypingSpeed.forEach((s) => {
+          this.labelsSpeed.push(s.x.toString());
+        });
         this.drawChart();
         this.addtoscores();
       }
@@ -160,7 +290,10 @@ export default defineComponent({
       let elapsedTime = (currentTime - this.startTime) / 1000;
       let clicksPerMinute = this.clicks / (elapsedTime / 60);
       let cpm = Math.round(clicksPerMinute);
+      this.time = Math.round((currentTime - this.startTime) / 1000);
       this.StatisticClicksPerMinute = cpm;
+      this.wpm = cpm / 5;
+      return cpm;
     },
     countAccuracy() {
       console.log((this.length - this.error) / this.length);
@@ -193,6 +326,24 @@ export default defineComponent({
         },
       });
       myChart;
+    },
+    exportToCsv() {
+      const data = [
+        {
+          errors: this.statisticErrors,
+          avgAccuracy: this.StatisticAccuracy,
+          time: this.time,
+          CPM: this.StatisticClicksPerMinute,
+          WPm: this.wpm,
+          title: this.source,
+        },
+      ];
+      const csv = Papa.unparse(data);
+      const blob = new Blob([csv]);
+      const link = document.createElement("a");
+      link.href = window.URL.createObjectURL(blob);
+      link.download = "data.csv";
+      link.click();
     },
   },
 });
