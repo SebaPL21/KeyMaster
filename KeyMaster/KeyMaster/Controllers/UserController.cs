@@ -36,6 +36,11 @@ namespace KeyMaster.Controllers
                 {
                     return BadRequest();
                 }
+                if(userData.emailConfirmed.IsNullOrEmpty())
+                {
+                    return BadRequest("");
+                }
+            
                 var jwt = _configuration.GetSection("Jwt").Get<Jwt>();
                 if (jwt != null)
                 {

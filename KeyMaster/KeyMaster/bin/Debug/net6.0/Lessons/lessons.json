@@ -2,31 +2,55 @@
   {
     "text": "aaa sss ddd fff qqq www eee rrr zzz xxx ccc vvv zzzd ccce sssw rrra fffq eeeq sssd cccq qqqc aaae wwwx vvvd aaax cccr sssf eeeq qqqx fffz vvvv wwws",
     "length": 147,
-    "name": "Lewa dłoń",
+    "name": "aaa sss ddd",
     "id": 1
   },
   {
     "text": "llkk kljl kljk kkll jjkj klkj kjjk jklk jljk jkkk lljj kljj lkkk ljlk ljll jllj lkjj kljj lljj jkkj ljjl kljj jljl ljjj jllj jllk jklk jkjl llkj kllk jklj kkkj ljjj kkjj ljkk jjjj kkll llll ljkj jljl",
     "length": 147,
-    "name": "Lewa dłoń",
+    "name": "llkk kljl kljk",
     "id": 2
   },
   {
     "text": "eaz eze zai aiei zea eaa zeze izz ie aez zi ii iz iia ez eaz eze zai aiei zea eaa zeze izz ie aez zi ii iz iia ez",
     "length": 113,
-    "name": "Obie dłonie",
+    "name": "eaz eze zai aiei",
     "id": 3
   },
   {
     "text": "ieea ze ii zizi izzi zeza ea azziza zaeaz zeze aii ez zee iaa aa ieea ze ii zizi izzi zeza ea azziza zaeaz zeze aii ez zee iaa aa ",
     "length": 129,
-    "name": "Obie dłonie",
+    "name": "ieea ze ii zizi izzi zez",
     "id": 4
+  },
+  {
+    "text": "qwe rty asd fzx cvb qaz wsx edc rfv tgb yhn ujm qaz wsx edc rfv tgb yhn ujm",
+    "length": 68,
+    "name": "qwe",
+    "id": 5
+  },
+  {
+    "text": "asd fgh jkl qwe rty uio zxc vbn mnb vcx zxc asd fgh jkl qwe rty uio zxc vbn mnb vcx zxc",
+    "length": 96,
+    "name": "asd jkl",
+    "id": 6
+  },
+  {
+    "text": "fgh jkl asd qwe uio vbn zxc mnb vcx rty jkl zxc fgh asd vbn qwe mnb rty uio zxc vbn jkl fgh qwe asd uio zxc mnb vcx fgh jkl rty asd vbn zxc mnb vcx qwe fgh uio jkl rty asd vbn zxc mnb vcx qwe fgh uio jkl rty asd vbn zxc mnb vcx",
+    "length": 96,
+    "name": "fgh",
+    "id": 7
   },
   {
     "text": "marble captivate average desire user pity quiet organisation novel bald area folklore spy cook check park",
     "length": 105,
-    "name": "Słowa",
-    "id": 5
+    "name": "Słowa po angielsku",
+    "id": 8
+  },
+  {
+    "text": "uczenie maszynowe sieci neuronowe język naturalny przetwarzanie dane technologia inteligencja maszyna algorytmy przetwarzania",
+    "length": 200,
+    "name": "Polskie słowa",
+    "id": 9
   }
 ]

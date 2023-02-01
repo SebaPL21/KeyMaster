@@ -20,13 +20,14 @@
         </div>
       </div>
       <form class="sign-up" @submit.prevent="submitRegistrationForm()">
-        <h2>Stwóż login</h2>
+        <h2>Stwórz login</h2>
         <div>Użyj swojego adresu email</div>
         <input type="text" v-model="nick" placeholder="Nick" />
         <input type="email" v-model="email" placeholder="Email" />
         <input type="password" v-model="password" placeholder="Hasło" />
 
-        <button class="button" @click="sendEmail()">Rejestracja</button>
+        <!--        <button class="button" @click="sendEmail()">Rejestracja</button>-->
+        <button class="button">Rejestracja</button>
       </form>
       <form class="sign-in" @submit.prevent="submitLoginForm()">
         <h2>Zaloguj się</h2>
@@ -38,7 +39,9 @@
           name="password"
           placeholder="Hasło"
         />
-        <a href="#">Zapomniałeś hasła?</a>
+        <div v-if="error">
+          <span class="text-red">Podano nie właściwe dane.</span>
+        </div>
         <button class="button" type="submit">Zaloguj</button>
       </form>
     </div>
@@ -61,6 +64,8 @@ export default defineComponent({
       password: "",
       nick: "",
       signUp: false,
+      error: false,
+      userID: 0,
     };
   },
   components: {},
@@ -79,6 +84,7 @@ export default defineComponent({
         })
         .catch((error) => {
           console.log(error);
+          this.error = true;
         });
     },
     submitRegistrationForm() {
@@ -89,6 +95,8 @@ export default defineComponent({
           password: this.password,
         })
         .then((response) => {
+          this.userID = response.data.UserId;
+          this.sendEmail();
           localStorage.setItem("token", response.data.token);
           router.push("/");
           console.log(response);
@@ -97,27 +105,16 @@ export default defineComponent({
           console.log(error);
         });
     },
-    // sendEmail() {
-    //   Email.send({
-    //     Host: "sandbox.smtp.mailtrap.io",
-    //     Username: "93e88b8394ec23",
-    //     Password: "7e7d4338ccbcef",
-    //     To: "recipient@example.com",
-    //     From: "sender@example.com",
-    //     Subject: "Test email",
-    //     Body: "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>",
-    //   }).then((message) => alert(message));
-    // },
     sendEmail() {
       try {
-        console.log("dupa");
         emailjs.send(
           "service_okkj1vs",
           "template_cqt7rsp",
           {
             name: this.nick,
             email: this.email,
-            message: "Weryfikacja konta <button> Zweryfikuj maila </button> ",
+            message: "Weryfikacja konta",
+            UserId: this.userID,
           },
           "k8R68iqRUP5AQf5tB"
         );

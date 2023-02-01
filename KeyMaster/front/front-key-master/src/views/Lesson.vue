@@ -1,7 +1,7 @@
 <template>
   <Navbar></Navbar>
   <div class="test-title">
-    <h1>Witaj na ćwiczeniach.</h1>
+    <h1>Witaj na Lekcji.</h1>
     <p>
       Tutaj będziesz mógł/mogła poprawić swoją techinike oraz ułożenie rąk na
       klawiaturze

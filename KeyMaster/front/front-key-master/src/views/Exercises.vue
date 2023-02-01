@@ -2,11 +2,14 @@
   <Navbar></Navbar>
   <div class="test-title">
     <h1>Krótkie Ćwiczenia</h1>
-    <h3></h3>
   </div>
   <div class="lesson-container">
     <div class="quote">
-      <h3>Ilość znaków: {{ length }}</h3>
+      <h3>
+        Ilość znaków: {{ length }}
+        <v-btn @click="ForcesUpdateComponent()">Losuj nowy tekst</v-btn>
+      </h3>
+
       <span class="word" v-for="text in text2">
         {{ text }}
       </span>
@@ -195,6 +198,9 @@ export default defineComponent({
   },
 
   methods: {
+    ForcesUpdateComponent() {
+      window.location.reload();
+    },
     fetchquote() {
       this.axios
         .get("https://localhost:5001/api/quotes/fetch")

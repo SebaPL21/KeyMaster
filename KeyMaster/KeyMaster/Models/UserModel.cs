@@ -14,6 +14,7 @@ namespace KeyMaster.Models
         [Required(ErrorMessage = "Email is requried!")]
         public string Email { get; set; }
         public string? Nickname { get; set; }
+        public string? emailConfirmed { get; set; } 
     }
     public class Jwt
     {

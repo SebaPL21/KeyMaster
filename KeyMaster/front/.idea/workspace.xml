@@ -5,19 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f3065f8-9d36-4710-bf63-64a39a280a42" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/front-key-master/public/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-key-master/src/views/Verify.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.futdcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/v17/fileList.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/v17/fileList.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.metadata.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.metadata.v5.2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.projects.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.projects.v5.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/Controllers/RegisterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/Controllers/RegisterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/Lessons/lessons.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/Lessons/lessons.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/Models/UserModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/Models/UserModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/Lessons/lessons.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/Lessons/lessons.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/ref/KeyMaster.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/ref/KeyMaster.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/refint/KeyMaster.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/refint/KeyMaster.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-key-master/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-key-master/src/assets/logo.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/components/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-key-master/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-key-master/src/styles/content.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/styles/content.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-key-master/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/styles/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/views/Exercises.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/Exercises.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/views/Lesson.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/Lesson.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/views/Test.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/Test.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-key-master/src/views/SignPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/SignPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-key-master/src/views/WelcomeSite.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/WelcomeSite.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +70,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sebas/Documents/KeyMaster/KeyMaster/front&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sebas/Documents/KeyMaster/KeyMaster/front/front-key-master/public&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -67,7 +84,12 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sebas\Documents\KeyMaster\KeyMaster\front\front-key-master\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sebas\Documents\KeyMaster\KeyMaster\front\front-key-master\src\assets" />
+      <recent name="C:\Users\sebas\Documents\KeyMaster\KeyMaster\front\front-key-master\src" />
       <recent name="C:\Users\sebas\Documents\KeyMaster\KeyMaster\front\front-key-master\src\views" />
     </key>
   </component>
@@ -116,7 +138,9 @@
       <workItem from="1675027708668" duration="3391000" />
       <workItem from="1675073326181" duration="20091000" />
       <workItem from="1675160251438" duration="13441000" />
-      <workItem from="1675204109279" duration="1524000" />
+      <workItem from="1675204109279" duration="1655000" />
+      <workItem from="1675243197134" duration="15005000" />
+      <workItem from="1675267806103" duration="4919000" />
     </task>
     <servers />
   </component>

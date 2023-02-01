@@ -3,6 +3,7 @@
     <div class="nav">
       <router-link to="/"><h1 class="logo">KeyMaster</h1></router-link>
       <div class="nav-links">
+        <router-link to="/Exercises"><h2>Ćwiczenia</h2></router-link>
         <h2 id="menu-activator">Lekcje</h2>
         <v-menu activator="#menu-activator">
           <v-list class="lessonList">
@@ -10,7 +11,8 @@
               <v-list-item-title>
                 <router-link
                   :to="{ name: 'lesson', params: { lessonId: lesson.Id } }"
-                  >{{ lesson.Name }}
+                  >Lekcja {{ lesson.Id }}
+                  <p class="lesson-name">{{ lesson.Name }}</p>
                 </router-link>
               </v-list-item-title>
             </v-list-item>

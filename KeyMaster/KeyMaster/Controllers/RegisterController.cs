@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using KeyMaster.Context;
 using KeyMaster.Models;
+using Microsoft.IdentityModel.Tokens;
 
 namespace KeyMaster.Controllers
 {
@@ -72,7 +73,35 @@ namespace KeyMaster.Controllers
 
             return NoContent();
         }
+        [HttpPut("verify/{id}")]
+        public async Task<IActionResult> PutProduct(int id)
+        {
+            var userModel = await _context.Users.FindAsync(id);
+            if (userModel.emailConfirmed.IsNullOrEmpty() )
+            {
+                userModel.emailConfirmed = "true";
+            }
 
+            _context.Entry(userModel).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UserModelExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
         // POST: api/Register
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost("register")]
