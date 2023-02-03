@@ -1,23 +1,27 @@
-$red : #c03e3f;
-$dark : #252525;
+$red: #c03e3f;
+$dark: #252525;
 $navBg: #181818;
 
-.content{
-    margin-top: 50px;
-    width: 1000px;
-    background-color: $dark;
-    
-    .userMainStats{
-        border:$red 1px solid;
-        border-radius: 20px;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        margin-bottom: 30px;
-        justify-content: space-around;
+.content {
+  margin-top: 15px;
+  width: 1000px;
+  background-color: $dark;
+  border-radius: 20px;
+  overflow-y: auto;
+  height: 795px;
+  color: #ffffff;
 
-        h3{
-            font-weight: 700;
-        }
+  .userMainStats {
+    border: $red 1px solid;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: space-around;
+
+    h3 {
+      font-weight: 700;
     }
+  }
 }

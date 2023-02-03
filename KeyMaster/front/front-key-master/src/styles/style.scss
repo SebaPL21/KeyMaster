@@ -15,7 +15,6 @@ html {
   font-size: 1rem;
   color: #222;
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +31,34 @@ html {
   align-items: center;
 }
 
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    list-style: none;
+    cursor: pointer;
+    margin-left: 20px;
+
+    a {
+      color: #ffffff;
+    }
+  }
+
+  li.active a {
+    text-decoration: underline #c03e3f;
+  }
+
+  li.a.router-link-active {
+    color: #1c5901;
+  }
+}
+
+.navActive {
+  text-decoration: underline #c03e3f;
+}
+
 .navbar {
   background-color: $navBg;
   color: #fff;
@@ -42,11 +69,11 @@ html {
 }
 
 .incorect {
-  color: yellow;
+  color: red;
 }
 
 .correct {
-  color: white;
+  color: #5dea03;
 }
 
 .v-menu .v-overlay__content {
@@ -56,7 +83,6 @@ html {
 .lessonList {
   background-color: $dark !important;
   display: flex;
-
 
   a {
     color: #ffffff;
@@ -108,6 +134,8 @@ html {
   padding: 10px;
   font-weight: 600;
   height: 20px;
+  width: 490px;
+  justify-content: flex-end;
 
   button {
     border: none;
@@ -143,6 +171,13 @@ v-theme--dark {
   transition: 0.3s;
   color: #c03e3f;
   text-shadow: #5a1f1f -5px 5px 15px;
+}
+
+.logo-active {
+  transition: 0.3s;
+  color: #c03e3f;
+  //text-shadow: #5a1f1f -10px 10px 5px;
+  text-decoration: underline #ffffff;
 }
 
 /* początek głównego ekranu   */
@@ -211,10 +246,11 @@ v-theme--dark {
 
 .chart {
   width: 1000px;
-  height: 400px;
+  //height: 400px;
   display: flex;
   justify-content: center;
   margin-top: 30px;
+
 }
 
 .afterLessonStats {
@@ -222,6 +258,7 @@ v-theme--dark {
   align-items: center;
   justify-content: space-around;
   color: $red;
+  margin-top: 20px;
 }
 
 h2 {
@@ -384,12 +421,10 @@ form {
 
 #keyboard {
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  height: 350px;
+  height: 475px;
+  flex-wrap: wrap;
+  margin-top: 28px;
 }
 
 .row {
@@ -410,18 +445,51 @@ form {
   line-height: calc(100% / 4);
   font-size: 20px;
   height: 50px;
+  opacity: 0.6;
   width: 50px;
   margin: 10px;
   box-shadow: 0px 1px 0px 7px #c03e3f;
 }
 
 .active {
-  background-color: #c03e3f !important;
+  opacity: 1;
   color: white;
 }
 
 .key.special {
   background-color: rgb(255, 255, 255);
+}
+
+.redKey {
+  background-color: #700005;
+}
+
+.orangeKey {
+  background-color: #FFA500FF;
+}
+
+.greenKey {
+  background-color: #499100;
+}
+
+.blueKey {
+  background-color: #1340d2;
+}
+
+.lightBlueKey {
+  background-color: #003c56;
+}
+
+.lightGreen {
+  background-color: #1c5901;
+}
+
+.yellowKey {
+  background-color: #5b4e00;
+}
+
+.maroonKey {
+  background-color: #800000FF;
 }
 
 .keyToPress {
@@ -489,5 +557,6 @@ form {
       }
     }
   }
+
 
 }

@@ -1,26 +1,42 @@
 <template>
   <v-app-bar elevation="6" class="navbar">
     <div class="nav">
-      <router-link to="/"><h1 class="logo">KeyMaster</h1></router-link>
-      <div class="nav-links">
-        <router-link to="/Exercises"><h2>Ćwiczenia</h2></router-link>
-        <h2 id="menu-activator">Lekcje</h2>
-        <v-menu activator="#menu-activator">
-          <v-list class="lessonList">
-            <v-list-item v-for="lesson in lessons">
-              <v-list-item-title>
-                <router-link
-                  :to="{ name: 'lesson', params: { lessonId: lesson.Id } }"
-                  >Lekcja {{ lesson.Id }}
-                  <p class="lesson-name">{{ lesson.Name }}</p>
-                </router-link>
-              </v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
+      <ul>
+        <li>
+          <router-link to="/" active-class="logo-active"
+            ><h1 class="logo">KeyMaster</h1></router-link
+          >
+        </li>
+        <li>
+          <h2 id="menu-activator" active-class="navActive">Lekcje</h2>
+          <v-menu activator="#menu-activator">
+            <v-list class="lessonList">
+              <v-list-item v-for="lesson in lessons">
+                <v-list-item-title>
+                  <router-link
+                    :to="{ name: 'lesson', params: { lessonId: lesson.Id } }"
+                    active-class="navActive"
+                    >Lekcja {{ lesson.Id }}
+                    <p class="lesson-name">{{ lesson.Name }}</p>
+                  </router-link>
+                </v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+        </li>
+        <li>
+          <router-link to="/test" active-class="navActive"
+            ><h2>Test szybkości</h2></router-link
+          >
+        </li>
+        <li>
+          <router-link to="/help" active-class="navActive"
+            ><h2>Pomoc</h2></router-link
+          >
+        </li>
+      </ul>
 
-        <router-link to="/test"><h2>Test szybkości</h2></router-link>
-      </div>
+      <div class="nav-links"></div>
       <div class="nav-signs-buttons">
         <div v-if="signIn" class="isloged">
           <router-link to="/profile"
@@ -30,7 +46,7 @@
         </div>
         <div v-else>
           <router-link to="/signup">
-            <button class="">Zaloguj się</button>
+            <button>Zaloguj się</button>
           </router-link>
         </div>
       </div>
@@ -59,6 +75,7 @@ export default defineComponent({
       lessons: {},
       username: "",
       signIn: false,
+      isActive: false,
     };
   },
   created() {
@@ -66,6 +83,9 @@ export default defineComponent({
     this.getUsername();
   },
   methods: {
+    setactive() {
+      var li = document.getElementsByClassName("link");
+    },
     logout() {
       localStorage.clear();
       this.signIn = false;

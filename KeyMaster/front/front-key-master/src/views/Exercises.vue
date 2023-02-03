@@ -1,13 +1,16 @@
 <template>
   <Navbar></Navbar>
-  <div class="test-title">
-    <h1>Krótkie Ćwiczenia</h1>
-  </div>
   <div class="lesson-container">
     <div class="quote">
-      <h3>
+      <h3 class="mb-5">
         Ilość znaków: {{ length }}
-        <v-btn @click="ForcesUpdateComponent()">Losuj nowy tekst</v-btn>
+        <v-btn
+          outlined
+          color="#C03E3FFF"
+          class="float-end me-5 reloadButton"
+          @click="ForcesUpdateComponent()"
+          >Losuj nowy tekst
+        </v-btn>
       </h3>
 
       <span class="word" v-for="text in text2">
@@ -28,45 +31,46 @@
     </div>
     <div id="keyboard">
       <div class="row">
-        <div class="key" data-key="q" id="q">q</div>
-        <div class="key" data-key="w" id="w">w</div>
-        <div class="key" data-key="e" id="e">e</div>
-        <div class="key" data-key="r" id="r">r</div>
-        <div class="key" data-key="t" id="t">t</div>
-        <div class="key" data-key="y" id="y">y</div>
-        <div class="key" data-key="u" id="u">u</div>
-        <div class="key" data-key="i" id="i">i</div>
-        <div class="key" data-key="o" id="o">o</div>
-        <div class="key" data-key="p" id="p">p</div>
+        <div class="key redKey" data-key="q" id="q">q</div>
+        <div class="key orangeKey" data-key="w" id="w">w</div>
+        <div class="key greenKey" data-key="e" id="e">e</div>
+        <div class="key blueKey" data-key="r" id="r">r</div>
+        <div class="key blueKey" data-key="t" id="t">t</div>
+        <div class="key lightBlueKey" data-key="y" id="y">y</div>
+        <div class="key lightBlueKey" data-key="u" id="u">u</div>
+        <div class="key lightGreen" data-key="i" id="i">i</div>
+        <div class="key yellowKey" data-key="o" id="o">o</div>
+        <div class="key maroonKey" data-key="p" id="p">p</div>
       </div>
       <div class="row">
-        <div class="key" data-key="a" id="a">a</div>
-        <div class="key" data-key="s" id="s">s</div>
-        <div class="key" data-key="d" id="d">d</div>
-        <div class="key" data-key="f" id="f">f</div>
-        <div class="key" data-key="g" id="g">g</div>
-        <div class="key" data-key="h" id="h">h</div>
-        <div class="key" data-key="j" id="j">j</div>
-        <div class="key" data-key="k" id="k">k</div>
-        <div class="key" data-key="lk" id="l">l</div>
-        <div class="key" data-key=";" id="colon">;</div>
+        <div class="key redKey" data-key="a" id="a">a</div>
+        <div class="key orangeKey" data-key="s" id="s">s</div>
+        <div class="key greenKey" data-key="d" id="d">d</div>
+        <div class="key blueKey" data-key="f" id="f">f</div>
+        <div class="key blueKey" data-key="g" id="g">g</div>
+        <div class="key lightBlueKey" data-key="h" id="h">h</div>
+        <div class="key lightBlueKey" data-key="j" id="j">j</div>
+        <div class="key lightGreen" data-key="k" id="k">k</div>
+        <div class="key yellowKey" data-key="l" id="l">l</div>
+        <div class="key maroonKey" data-key=";" id="colon">;</div>
       </div>
       <div class="row">
-        <div class="key special" data-key="shift" id="shift">shift</div>
-        <div class="key" data-key="z" id="z">z</div>
-        <div class="key" data-key="x" id="x">x</div>
-        <div class="key" data-key="c" id="c">c</div>
-        <div class="key" data-key="v" id="v">v</div>
-        <div class="key" data-key="b" id="b">b</div>
-        <div class="key" data-key="n" id="n">n</div>
-        <div class="key" data-key="m" id="m">m</div>
-        <div class="key" data-key="," id="coma">,</div>
-        <div class="key" data-key="." id="dot">.</div>
+        <div class="key redKey" data-key="shift" id="shift">shift</div>
+        <div class="key redKey" data-key="z" id="z">z</div>
+        <div class="key orangeKey" data-key="x" id="x">x</div>
+        <div class="key greenKey" data-key="c" id="c">c</div>
+        <div class="key blueKey" data-key="v" id="v">v</div>
+        <div class="key blueKey" data-key="b" id="b">b</div>
+        <div class="key lightBlueKey" data-key="n" id="n">n</div>
+        <div class="key lightBlueKey" data-key="m" id="m">m</div>
+        <div class="key lightGreen" data-key="," id="coma">,</div>
+        <div class="key yellowKey" data-key="." id="dot">.</div>
       </div>
       <div class="row">
         <div class="key space" data-key=" " id="space">space</div>
         <div class="key" data-key="alt" id="alt">alt</div>
       </div>
+      <v-img src="../assets/hands.jpg" height="229" width="461" />
     </div>
     <div>
       <div class="chart">
@@ -205,7 +209,7 @@ export default defineComponent({
       this.axios
         .get("https://localhost:5001/api/quotes/fetch")
         .then((resposne) => {
-          // console.log(resposne.data);
+          //console.log(resposne.data);
           this.source = resposne.data.Source;
           this.text = resposne.data.Text;
           this.length = resposne.data.Length;

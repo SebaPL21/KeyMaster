@@ -77,8 +77,6 @@ export default defineComponent({
           password: this.password,
         })
         .then((response) => {
-          console.log(response);
-          console.log("asdasd");
           localStorage.setItem("token", response.data);
           router.push("/");
         })
@@ -99,7 +97,6 @@ export default defineComponent({
           this.sendEmail();
           localStorage.setItem("token", response.data.token);
           router.push("/");
-          console.log(response);
         })
         .catch((error) => {
           console.log(error);

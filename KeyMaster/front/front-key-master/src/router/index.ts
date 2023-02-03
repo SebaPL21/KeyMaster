@@ -4,19 +4,19 @@ import SignupPage from "../views/SignPage.vue";
 import TestPage from "../views/Test.vue";
 import Profile from "../views/Profil.vue";
 import Lesson from "@/views/Lesson.vue";
-import WelcomeSite from "@/views/WelcomeSite.vue";
+import Help from "@/views/WelcomeSite.vue";
 import verify from "@/views/Verify.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/Exercises",
+    path: "/",
     name: "Exercises",
     component: Exercises,
   },
   {
-    path: "/",
-    name: "WelcomeSite",
-    component: WelcomeSite,
+    path: "/Help",
+    name: "Help",
+    component: Help,
   },
   {
     path: "/signup",

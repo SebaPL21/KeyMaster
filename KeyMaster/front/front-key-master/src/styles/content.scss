@@ -2,19 +2,19 @@ $red: #c03e3f;
 $dark: #252525;
 $navBg: #181818;
 .lesson-container {
-  top: 10px;
+  top: 20px;
   position: relative;
   width: 1050px;
-  height: 630px;
+  height: 800px;
   border-radius: 10px;
-  background-color: $dark;
+  background-color: #252525;
   overflow-y: auto;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, .2),
-  0 10px 10px rgba(0, 0, 0, .2);
+  padding-bottom: 20px;
+  box-shadow: 0 15px 30px rgb(0 0 0 / 20%), 0 10px 10px rgb(0 0 0 / 20%);
 
   .quote {
     background-color: $dark;
-    color: $red;
+    color: #ffffff;
     font-size: 20px;
     font-weight: 700;
     margin: 30px 0 0 30px;
@@ -22,17 +22,24 @@ $navBg: #181818;
   }
 
   .autor {
-    color: $red;
+    color: #ffffff;
     font-size: 20px;
     font-weight: 700;
     text-align: right;
     padding-right: 20px;
     width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
   }
 
   .inputlesson {
     width: 100%;
     display: flex;
+  }
+
+  .reloadButton {
+    background-color: #222222;
+    color: #ffffff;
   }
 
   .wordInput {

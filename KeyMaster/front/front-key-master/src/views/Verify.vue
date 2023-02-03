@@ -1,6 +1,14 @@
 <template>
   <Navbar></Navbar>
-  <div style="margin-top: 100px">POmyśnie zweryfikowano</div>
+  <div class="mt-16 text-white text-center">
+    <h1>Pomyśnie zweryfikowano</h1>
+    <h2>KeyMaster wita</h2>
+    <router-link to="/">
+      <v-btn class="danger mt-10 text-red text-xxl-caption" variant="outlined"
+        >Przejdź do strony głównej
+      </v-btn>
+    </router-link>
+  </div>
 </template>
 
 <script>

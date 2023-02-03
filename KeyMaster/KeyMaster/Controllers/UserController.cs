@@ -38,7 +38,7 @@ namespace KeyMaster.Controllers
                 }
                 if(userData.emailConfirmed.IsNullOrEmpty())
                 {
-                    return BadRequest("");
+                    return BadRequest("Nie zweryfikowano maila");
                 }
             
                 var jwt = _configuration.GetSection("Jwt").Get<Jwt>();
