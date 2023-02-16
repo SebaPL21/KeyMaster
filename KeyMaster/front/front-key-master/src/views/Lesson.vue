@@ -58,7 +58,7 @@
       </div>
       <div class="row">
         <div class="key space" data-key=" " id="space">space</div>
-        <div class="key" data-key="alt" id="alt">alt</div>
+        <div class="key alt"  data-key="alt" id="alt">alt</div>
       </div>
       <v-img src="../assets/hands.jpg" height="229" width="461" />
     </div>
@@ -229,14 +229,13 @@ export default defineComponent({
             failAt = i;
             spanClass[i].setAttribute("class", "incorect word");
             errorpos.push({ x: failAt, y: errottmp });
-            typeSpeed.push({ x: i, y: this.wpm });
           } else {
             errorpos.push({ x: failAt, y: errottmp });
-            typeSpeed.push({ x: i, y: this.wpm });
             spanClass[i].setAttribute("class", "correct word");
           }
+          
         }
-
+        typeSpeed.push({ x: i, y: avgSpeed });
         let nextLetter = textArray[i + 1];
         let clickedKeys = document.getElementsByClassName("key active");
         let keyCodes = Object.keys(this.lettersDictionary).map((element) => {
@@ -260,10 +259,12 @@ export default defineComponent({
           }
         }
       }
+      
       this.error = errottmp;
       this.errorPosition = errorpos;
       this.TypingSpeed = typeSpeed;
       this.StatisticKeyboardClicks++;
+      console.log(this.length);
       if (inputTextArray.length != 0 && inputTextArray.length == this.length) {
         this.isEnabled = true;
         this.afterLesson = true;
@@ -274,10 +275,14 @@ export default defineComponent({
         this.TypingSpeed.forEach((s) => {
           this.labelsSpeed.push(s.x.toString());
         });
+      
+      }
+      if (inputTextArray.length != 0 && inputTextArray.length == this.length) {
         this.drawChart();
         this.addtoscores();
       }
     },
+
     countClicksPerMinute() {
       this.clicks++;
       let currentTime = Date.now();
@@ -287,10 +292,9 @@ export default defineComponent({
       this.time = Math.round((currentTime - this.startTime) / 1000);
       this.StatisticClicksPerMinute = cpm;
       this.wpm = cpm / 5;
-      return cpm;
+      return cpm/5;
     },
     countAccuracy() {
-      console.log((this.length - this.error) / this.length);
       let acc = ((this.length - this.error) / this.length) * 100;
       let accuracy = Math.round(acc);
       this.StatisticAccuracy = accuracy;
@@ -298,12 +302,18 @@ export default defineComponent({
     drawChart() {
       const ctx = "myChart";
       const data = {
-        labels: this.labels,
+        labels: this.labelsSpeed,
         datasets: [
           {
-            label: "Wykres blędów",
+            label: "Błędy",
             data: this.errorPosition,
             borderColor: "rgb(192,75,75)",
+            tension: 0.1,
+          },
+          {
+            label: "Wpm",
+            data: this.TypingSpeed,
+            borderColor: "rgb(54,122,224)",
             tension: 0.1,
           },
         ],
@@ -316,6 +326,9 @@ export default defineComponent({
             y: {
               beginAtZero: true,
             },
+            x: {
+              beginAtZero: true,
+            },
           },
         },
       });
@@ -324,6 +337,7 @@ export default defineComponent({
     exportToCsv() {
       const data = [
         {
+          fixedErrors: this.error,
           errors: this.statisticErrors,
           avgAccuracy: this.StatisticAccuracy,
           time: this.time,

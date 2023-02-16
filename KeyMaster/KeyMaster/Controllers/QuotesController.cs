@@ -1,13 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
-using System;
-using System.Xml.Linq;
-using System.Text.Json.Serialization;
+﻿using KeyMaster.Models;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using JsonSerializer = Newtonsoft.Json.JsonSerializer;
-using System.Text.Json.Nodes;
-using Microsoft.AspNetCore.Http;
-using KeyMaster.Models;
 
 namespace KeyMaster.Controllers
 {
@@ -17,10 +10,10 @@ namespace KeyMaster.Controllers
     {
    
         [HttpGet("fetch")]
-        public ActionResult<QuotesModel> GetLesson()
+        public ActionResult<QuotesModel> GetQuotes()
         {
             Random random = new Random();
-            var rand = random.Next(150);
+            var rand = random.Next(151);
             using (StreamReader r = new StreamReader("C:\\Users\\sebas\\Documents\\KeyMaster\\KeyMaster\\KeyMaster\\Lessons\\quotes.json"))
             {
                var jsonString = r.ReadToEnd();

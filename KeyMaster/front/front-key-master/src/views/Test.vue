@@ -58,7 +58,7 @@
       </div>
       <div class="row">
         <div class="key space" data-key=" " id="space">space</div>
-        <div class="key" data-key="alt" id="alt">alt</div>
+        <div class="key alt" data-key="alt" id="alt">alt</div>
       </div>
       <v-img src="../assets/hands.jpg" height="229" width="461" />
     </div>
@@ -81,11 +81,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import NavbarVue from "../components/Navbar.vue";
-
-import FooterVue from "../components/Footer.vue";
+import { Options, Vue } from "vue-class-component";
+import NavbarVue from "@/components/Navbar.vue";
+import FooterVue from "@/components/Footer.vue";
+import "/src/styles/style.scss";
+import { defineComponent, onMounted, ref } from "vue";
 import { Chart } from "chart.js/auto";
+import Papa from "papaparse";
+import * as events from "events";
 
 export default defineComponent({
   name: "HelloWorld",
@@ -175,7 +178,6 @@ export default defineComponent({
       this.axios
         .get("https://localhost:5001/api/lesson/test")
         .then((resposne) => {
-          console.log(resposne.data);
           this.source = resposne.data.Source;
           this.text = resposne.data.Text;
           this.text2 = resposne.data.Text.split("");
@@ -221,14 +223,12 @@ export default defineComponent({
             failAt = i;
             spanClass[i].setAttribute("class", "incorect word");
             errorpos.push({ x: failAt, y: errottmp });
-            typeSpeed.push({ x: i, y: this.wpm });
           } else {
             errorpos.push({ x: failAt, y: errottmp });
-            typeSpeed.push({ x: i, y: this.wpm });
             spanClass[i].setAttribute("class", "correct word");
           }
         }
-
+        typeSpeed.push({ x: i, y: avgSpeed });
         let nextLetter = textArray[i + 1];
         let clickedKeys = document.getElementsByClassName("key active");
         let keyCodes = Object.keys(this.lettersDictionary).map((element) => {
@@ -279,7 +279,7 @@ export default defineComponent({
       this.time = Math.round((currentTime - this.startTime) / 1000);
       this.StatisticClicksPerMinute = cpm;
       this.wpm = cpm / 5;
-      return cpm;
+      return cpm/5;
     },
     countAccuracy() {
       console.log((this.length - this.error) / this.length);
@@ -314,10 +314,32 @@ export default defineComponent({
             y: {
               beginAtZero: true,
             },
+            x: {
+              beginAtZero: true,
+            },
           },
         },
       });
       myChart;
+    },
+    exportToCsv() {
+      const data = [
+        {
+          fixedErrors: this.error,
+          errors: this.statisticErrors,
+          avgAccuracy: this.StatisticAccuracy,
+          time: this.time,
+          CPM: this.StatisticClicksPerMinute,
+          WPm: this.wpm,
+          title: this.source,
+        },
+      ];
+      const csv = Papa.unparse(data);
+      const blob = new Blob([csv]);
+      const link = document.createElement("a");
+      link.href = window.URL.createObjectURL(blob);
+      link.download = "data.csv";
+      link.click();
     },
   },
 });

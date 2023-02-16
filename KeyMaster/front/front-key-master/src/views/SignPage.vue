@@ -20,13 +20,15 @@
         </div>
       </div>
       <form class="sign-up" @submit.prevent="submitRegistrationForm()">
-        <h2>Stwórz login</h2>
+        <h2>Załóż konto</h2>
         <div>Użyj swojego adresu email</div>
         <input type="text" v-model="nick" placeholder="Nick" />
         <input type="email" v-model="email" placeholder="Email" />
         <input type="password" v-model="password" placeholder="Hasło" />
 
-        <!--        <button class="button" @click="sendEmail()">Rejestracja</button>-->
+        <div v-if="error">
+          <span class="text-red">Podano nie właściwe dane.</span>
+        </div>
         <button class="button">Rejestracja</button>
       </form>
       <form class="sign-in" @submit.prevent="submitLoginForm()">
@@ -99,7 +101,8 @@ export default defineComponent({
           router.push("/");
         })
         .catch((error) => {
-          console.log(error);
+          console.log(error.errors);
+          this.error = true;
         });
     },
     sendEmail() {

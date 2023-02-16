@@ -1,75 +1,102 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="KeyMaster.Models.LessonModel">
-    <Position X="9" Y="6" Width="1.5" />
+    <Position X="9" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>Models\LessonModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KeyMaster.Models.QuotesModel">
-    <Position X="5" Y="6.25" Width="1.5" />
+    <Position X="5.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAgAAAAAAAAAAAABAAAAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>Models\QuotesModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KeyMaster.Models.ScoreModel">
-    <Position X="11.25" Y="6" Width="1.5" />
+    <Position X="10.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAgAAAAQAAAAAAAAgAAAAAAAAAAACBAAAAAAg=</HashCode>
+      <HashCode>AAAAAAAAgAAAAQAAAAAIAAgAAAAAAAAAAAABAACAAAA=</HashCode>
       <FileName>Models\ScoreModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KeyMaster.Models.UserModel">
-    <Position X="13.5" Y="6" Width="1.25" />
+    <Position X="12.5" Y="5.75" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAACAAAAAAAAAAAAgAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAAAAACAAAAAAAAAAAAgAAAAAAAACAAAAAAAEAAA=</HashCode>
       <FileName>Models\UserModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KeyMaster.Models.Jwt">
-    <Position X="6.75" Y="6" Width="1.5" />
+    <Position X="7.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAEAAAAAIAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\UserModel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="KeyMaster.Controllers.UserController">
-    <Position X="2.75" Y="3.75" Width="2" />
+  <Class Name="KeyMaster.Test" Collapsed="true">
+    <Position X="16" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAAAAAAAAAACAAAAAAAAAEAAAAAAAA=</HashCode>
-      <FileName>Controllers\UserController.cs</FileName>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAEAAA=</HashCode>
+      <FileName>Test.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyMaster.Models.EmailHelper">
+    <Position X="14" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\EmailHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyMaster.Controllers.BaseController">
+    <Position X="1.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\BaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyMaster.Controllers.EmailController">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\EmailController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KeyMaster.Controllers.LessonController">
-    <Position X="3.25" Y="2" Width="1.5" />
+    <Position X="6.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controllers\LessonController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KeyMaster.Controllers.QuotesControler">
-    <Position X="3.25" Y="0.5" Width="1.5" />
+    <Position X="8.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controllers\QuotesController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="KeyMaster.Test" Collapsed="true">
-    <Position X="15.75" Y="6" Width="1.5" />
+  <Class Name="KeyMaster.Controllers.RegisterController">
+    <Position X="10" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAEAAA=</HashCode>
-      <FileName>Test.cs</FileName>
+      <HashCode>IAAAAQABAAAABAAAABAAAAAAAAAAAAAAACAAAABAAAA=</HashCode>
+      <FileName>Controllers\RegisterController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Microsoft.AspNetCore.Mvc.ControllerBase">
-    <Position X="0.75" Y="0.5" Width="1.75" />
-    <TypeIdentifier />
+  <Class Name="KeyMaster.Controllers.ScoresModelsController">
+    <Position X="2.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEABQBAAAAAACAAAAAQAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\ScoresModelsController.cs</FileName>
+    </TypeIdentifier>
   </Class>
-  <Class Name="System.Object">
-    <Position X="9" Y="3" Width="1.75" />
-    <TypeIdentifier />
+  <Class Name="KeyMaster.Controllers.UserController">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAEAEQAAAAAAA=</HashCode>
+      <FileName>Controllers\UserController.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

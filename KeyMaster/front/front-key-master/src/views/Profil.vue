@@ -114,15 +114,15 @@ export default defineComponent({
       speed.forEach((item) => {
         speeds.push(item.Cpm);
         //console.log(item);
-        console.log(speeds);
+        //console.log(speeds);
       });
       for (let i = 0; i < speeds.length; i++) {
         if (isNaN(speeds[i])) {
           console.log(speeds[i]);
         } else {
           sum += parseInt(speeds[i].toString());
-          console.log(parseInt(speeds[i].toString()));
-          console.log(sum);
+          // console.log(parseInt(speeds[i].toString()));
+          // console.log(sum);
           this.AvgSpeed = Math.round(sum / speeds.length);
         }
       }

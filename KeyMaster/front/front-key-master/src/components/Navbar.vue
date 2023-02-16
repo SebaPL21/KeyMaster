@@ -4,7 +4,7 @@
       <ul>
         <li>
           <router-link to="/" active-class="logo-active"
-            ><h1 class="logo">KeyMaster</h1></router-link
+            ><h2 class="logo">KeyMaster</h2></router-link
           >
         </li>
         <li>
@@ -95,7 +95,6 @@ export default defineComponent({
         .get("https://localhost:5001/api/lesson/allLessons")
         .then((resposne) => {
           this.lessons = resposne.data;
-          //console.log(this.lessons);
         });
     },
     getUsername() {

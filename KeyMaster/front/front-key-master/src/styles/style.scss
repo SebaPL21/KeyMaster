@@ -249,8 +249,7 @@ v-theme--dark {
   //height: 400px;
   display: flex;
   justify-content: center;
-  margin-top: 30px;
-
+  margin-top: 55px;
 }
 
 .afterLessonStats {
@@ -434,62 +433,83 @@ form {
 }
 
 .key {
-  width: calc(100% / 10);
-  height: calc(100% / 4);
+
   background-color: #fff;
-  border: 1px solid #ccc;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: calc(100% / 4);
   font-size: 20px;
-  height: 50px;
-  opacity: 0.6;
-  width: 50px;
+  height: 55px;
+  opacity: 0.8;
+  color: #fff;
+  width: 55px;
   margin: 10px;
-  box-shadow: 0px 1px 0px 7px #c03e3f;
+  // box-shadow: 0px 1px 0px 7px #ffffff;
+  border-right: 7px solid #dadada;
+  border-bottom: 7px solid #dadada;
+  transition: border 0.2s linear;
 }
 
 .active {
-  opacity: 1;
-  color: white;
+  //opacity: 1;
+  font-weight: bold;
+  //filter: brightness(150%);
+  //box-shadow: 0px 1px 0px 7px #ff0202;
+  font-weight: 900;
+  color: #000000;
+  border: 0;
+  border-right: 0px solid #dadada;
+  border-bottom: 0px solid #dadada;
+  transition: border 0.2s linear;
 }
 
 .key.special {
   background-color: rgb(255, 255, 255);
 }
+.alt{
+  color: #000000;
+}
 
 .redKey {
-  background-color: #700005;
+  background: rgb(145, 0, 0);
+  
 }
 
 .orangeKey {
-  background-color: #FFA500FF;
+  background-color: #ff4400;
+  
 }
 
 .greenKey {
   background-color: #499100;
+  
 }
 
 .blueKey {
   background-color: #1340d2;
+  
 }
 
 .lightBlueKey {
-  background-color: #003c56;
+  background-color: #5700e0;
+  
 }
 
 .lightGreen {
   background-color: #1c5901;
+  
 }
 
 .yellowKey {
-  background-color: #5b4e00;
+  background-color: #8c7600;
+  
 }
 
 .maroonKey {
   background-color: #800000FF;
+  
 }
 
 .keyToPress {
@@ -510,9 +530,10 @@ form {
 }
 
 .space {
-  background-color: #ea9797;
+  background-color: #c72b2b;
   width: 300px;
   height: 50px;
+  color: #ffffff;
 }
 
 .MainSiteContent {

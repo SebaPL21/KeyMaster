@@ -5,30 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f3065f8-9d36-4710-bf63-64a39a280a42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/front-key-master/src/assets/hands.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.futdcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/v17/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/KeyMaster/v17/fileList.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/KeyMaster/v17/fileList.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.metadata.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.metadata.v5.2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.projects.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/../.vs/ProjectEvaluation/keymaster.projects.v5.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KeyMaster/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/KeyMaster.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/Lessons/lessons.json" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/bin/Debug/net6.0/Lessons/lessons.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../KeyMaster/obj/Debug/net6.0/KeyMaster.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-key-master/src/assets/hands.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/assets/hands.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/components/Navbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/router/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/styles/content.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/styles/content.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/styles/profileStyle.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/styles/profileStyle.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/styles/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/views/Exercises.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/Exercises.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/views/Lesson.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/Lesson.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/views/Profil.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/Profil.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/views/SignPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/SignPage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-key-master/src/views/Test.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/Test.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-key-master/src/views/Verify.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-key-master/src/views/Verify.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +128,15 @@
       <workItem from="1675267806103" duration="5681000" />
       <workItem from="1675343888836" duration="12311000" />
       <workItem from="1675364064018" duration="7162000" />
-      <workItem from="1675417369415" duration="5892000" />
+      <workItem from="1675417369415" duration="8545000" />
+      <workItem from="1675442002596" duration="2918000" />
+      <workItem from="1675449589706" duration="1907000" />
+      <workItem from="1675511265550" duration="2343000" />
+      <workItem from="1675525934649" duration="1784000" />
+      <workItem from="1675604684890" duration="28000" />
+      <workItem from="1675696668852" duration="929000" />
+      <workItem from="1675702843409" duration="473000" />
+      <workItem from="1675780737542" duration="6000" />
     </task>
     <servers />
   </component>
