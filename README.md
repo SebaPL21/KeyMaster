@@ -1,8 +1,7 @@
-# KeyMaster - Aplikacja do nauki szybkiego pisania  
-Aplikacja została stworzona w celu pomocy użytkownikom w nauce szybkiego pisania. 
-Szybkie pisanie jest umiejętnością, która może przyspieszyć pracę z komputerem, zwiększyć produktywność i poprawić ogólną wydajność pisania. Aplikacja oferuje różnorodne funkcje i ćwiczenia, które pomogą użytkownikom w rozwijaniu ich umiejętności w tym obszarze.
+# KeyMaster - An application for learning fast typing.
+The application has been created to assist users in learning fast typing. Fast typing is a skill that can speed up computer work, increase productivity, and improve overall writing efficiency.
 
 # Funkcje aplikacji
-1. Ćwiczenia praktyczne: Aplikacja oferuje ćwiczenia praktyczne, które pomogą użytkownikom w budowaniu szybkości pisania i precyzji. Te ćwiczenia obejmują wpisywanie tekstów o różnej długości, specjalne zestawy słów, zdania i paragrafy. Aplikacja monitoruje postępy użytkowników i dostarcza informacji zwrotnej, aby pomóc im w identyfikowaniu obszarów wymagających poprawy.
+1. Practical Exercises: The application offers practical exercises that help users build typing speed and accuracy. These exercises include typing texts of various lengths, special word sets, sentences, and paragraphs. The application monitors users' progress and provides feedback to help them identify areas that need improvement.
 
-2. Testy i oceny: Aplikacja umożliwia użytkownikom przeprowadzanie testów, aby ocenić swoje umiejętności w szybkim pisaniu. Testy składają się z przypadkowych zestawów słów, które użytkownicy muszą napisać. Po zakończeniu testu aplikacja dostarcza szczegółowe oceny, takie jak liczba poprawnie wpisanych słów na minutę, dokładność.
+2. Tests and Assessments: The application allows users to take tests to assess their fast typing skills. The tests consist of random sets of words that users must type. After completing the test, the application provides detailed evaluations, such as the number of correctly typed words per minute and accuracy.
